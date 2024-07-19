@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fred Berberich's Website</title>
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Center the main content */
+        }
+        header {
+            background-color: #dc1919;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .custom-heading {
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
+        }
+        nav {
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        section {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px #ccc;
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+        }
+        section h2 {
+            font-size: 20px;
+            margin: 0 0 10px 0;
+        }
+        section p {
+            font-size: 16px;
+            margin: 0;
+        }
+        /* Creating the hamburger button */
+        .container {
+            display: inline-block;
+            cursor: pointer;
+        }
+        .dropbtn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 3em; /* Reduced height */
+            width: 3em; /* Reduced width */
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            background: transparent;
+            border-style: none;
+            border-radius: .75em;
+            position: absolute;
+        }
+        #button-top, #button-mid, #button-bot {
+            height: 3px;
+            width: 20px; /* Adjusted width */
+            background: white;
+            margin: 3px 0; /* Added margin to space the lines */
+            border-radius: 10px;
+        }
+        .dropdown {
+            position: relative; /* Changed from inline-block */
+            display: left-align; /* Changed from left */
+        }
+        .dropdown_content {
+            display: none;
+            position: absolute;
+            border-radius: .90em;
+            background-color: #FFFFFF80;
+            min-width: 145px;
+            box-shadow: 0px 20px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown_content ul {
+            list-style: none;
+            font-size: 2em;
+            padding: 0;
+        }
+        .dropdown_content a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0px 0px 0px;
+        }
+        .dropdown_content a:hover {
+            font-weight: bold;
+        }
+        .dropdown_content a:visited {
+            color: black;
+        }
+        .dropdown:hover .dropdown_content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #00000060;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .popup-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #c7c7c7;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+        }
+        .left-align {
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="dropdown">
+            <button class="dropbtn" id="hamburger-button">
+                <div id="button-top"></div>
+                <div id="button-mid"></div>
+                <div id="button-bot"></div>
+            </button>
+            <div class="dropdown_content">
+                <ul>
+                    <li><a href="c:\Users\Fred Berberich\Desktop\Coding\Projects\Making a website\Current work\Homepage.html">Home</a></li>
+                    <li><a href="c:\Users\Fred Berberich\Desktop\Coding\Projects\Making a website\Current work\AboutPage.html">About</a></li>
+                    <li><a href="c:\Users\Fred Berberich\Desktop\Coding\Projects\Making a website\Current work\ProjectPage.html">Projects</a></li>
+                    <li><a href="c:\Users\Fred Berberich\Desktop\Coding\Projects\Making a website\Current work\Contactpage.html">Contacts</a></li>
+                </ul>
+            </div>
+        </div>
+        <header>
+            <div class="container">
+                <h1>About Me</h1>
+            </div>
+        </header>
+    </header>
+    <main>
+        <div class="left-align">
+            <br>
+            <object type="application/pdf" data="c:\Users\Fred Berberich\Desktop\Resume.pdf"width="600"height="700"></object>
+        </div>
+    </main>
+</body>
+</html>
