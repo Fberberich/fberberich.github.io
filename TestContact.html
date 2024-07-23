@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fred Berberich's Website</title>
+    <style>
+        /* Creating normal website CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Center the main content */
+        }
+        header {
+            background-color: #dc1919;
+            color: #fff;
+            padding: 30px;
+            text-align: absolute;
+            position: relative;
+        }
+        nav {
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: -1; /* Ensure it is behind the header content */
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 40px;
+            font-weight: bold;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        section {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px #ccc;
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+        }
+        .background {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
+        section h2 {
+            font-size: 20px;
+            margin: 0 0 10px 0;
+        }
+        section p {
+            font-size: 16px;
+            margin: 0;
+        }
+        /* Creating the hamburger button */
+        .container {
+            display: inline-block;
+            cursor: pointer;
+        }
+        .dropbtn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 3em; /* Reduced height */
+            width: 3em; /* Reduced width */
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            background: transparent;
+            border-style: none;
+            border-radius: .75em;
+            position: absolute;
+        }
+        #button-top, #button-mid, #button-bot {
+            height: 3px;
+            width: 20px; /* Adjusted width */
+            background: white;
+            margin: 3px 0; /* Added margin to space the lines */
+            border-radius: 10px;
+        }
+        .dropdown {
+            position: relative; /* Changed from inline-block */
+            display: left-align; /* Changed from left */
+        }
+        .dropdown_content {
+            display: none;
+            position: absolute;
+            border-radius: .90em;
+            background-color: #FFFFFF80;
+            min-width: 145px;
+            box-shadow: 0px 20px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown_content ul {
+            list-style: none;
+            font-size: 2em;
+            padding: 0;
+        }
+        .dropdown_content a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0px 0px 0px;
+        }
+        .dropdown_content a:hover {
+            font-weight: bold;
+        }
+        .dropdown_content a:visited {
+            color: black;
+        }
+        .dropdown:hover .dropdown_content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #00000060;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .popup-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #c7c7c7;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.3);
+        }
+        .left-align {
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+            width: 60%;
+        }
+        /* Getting user input */
+        .contact-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form h2 {
+            margin-bottom: 20px;
+        }
+        .contact-form .form-group {
+            margin-bottom: 15px;
+        }
+        .contact-form .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact-form .form-group input,
+        .contact-form .form-group textarea {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 4px;
+        }
+        .contact-form .form-group textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        .contact-form .form-group button {
+            padding: 10px 150px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact-form .form-group button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="dropdown">
+            <button class="dropbtn" id="hamburger-button">
+                <div id="button-top"></div>
+                <div id="button-mid"></div>
+                <div id="button-bot"></div>
+            </button>
+            <div class="dropdown_content">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutPage.html">About</a></li>
+                    <li><a href="ProjectPage.html">Projects</a></li>
+                    <li><a href="Contactpage.html">Contacts</a></li>
+                    <li><a href="ResumePage.html">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <h1 style="text-align: center;">Contact Page</h1>
+        </div>
+    </header>
+    <nav>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </nav>
+    <main>
+        <div class="background">
+        <div class="contact-form">
+            <h2><div class="center-align">Contact Me</div></h2>
+            <h3>Do not worry! Any information inputed will be encrypted with a secure encryption and stored safely.<h3>
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">                
+                <div class="form-group">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p hidden>
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="firstname" name="firstname" required />
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="company-email">Company Email</label>
+                    <input type="email" id="company-email" name="company_email" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Message</label>
+                    <textarea id="description" name="description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </main>
+</body>
+</html>
