@@ -247,23 +247,23 @@
                 <div class="form-group">
                     <button type="submit">Submit</button>
                 </div>
+                <script>
+                    document.getElementById('contactForm').addEventListener('submit', function(event) {
+                      event.preventDefault();
+                      fetch(event.target.action, {
+                        method: event.target.method,
+                        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                        body: new URLSearchParams(new FormData(event.target)).toString()
+                      }).then(response => {
+                        if (response.ok) {
+                          window.location.href = '/success.html'; // Redirect to success page
+                        } else {
+                          alert('There was a problem with your submission. Please try again.');
+                        }
+                      });
+                    });
+                  </script>
             </form>
-            <script>
-                document.getElementById('contactForm').addEventListener('submit', function(event) {
-                  event.preventDefault();
-                  fetch(event.target.action, {
-                    method: event.target.method,
-                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                    body: new URLSearchParams(new FormData(event.target)).toString()
-                  }).then(response => {
-                    if (response.ok) {
-                      window.location.href = '/success.html'; // Redirect to success page
-                    } else {
-                      alert('There was a problem with your submission. Please try again.');
-                    }
-                  });
-                });
-              </script>
         </div>
     </div>
     </main>
