@@ -3,7 +3,7 @@
 <head>
     <title>Fred Berberich's Website</title>
     <style>
-        /* Creating normal website CSS */
+        /* CSS styles go here */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -13,24 +13,23 @@
         header {
             background-color: #dc1919;
             color: #fff;
-            padding: 30px;
-            text-align: absolute;
-            position: relative;
+            padding: 20px;
+            text-align: center;
+        }
+        .custom-heading {
+            font-family: 'Arial', sans-serif;
+            font-size: 24px;
         }
         nav {
             background-color: #ccc;
             display: flex;
             justify-content: center;
             padding: 10px;
-            position: absolute;
-            top: 0;
-            width: 100%;
-            z-index: -1; /* Ensure it is behind the header content */
         }
         nav a {
             color: #333;
             text-decoration: none;
-            margin: 0 40px;
+            margin: 0 10px;
             font-weight: bold;
         }
         main {
@@ -47,13 +46,6 @@
             margin: 10px;
             padding: 10px;
             width: 300px;
-        }
-        .background {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 20px;
-            background-color: #f9f9f9;
         }
         section h2 {
             font-size: 20px;
@@ -152,47 +144,6 @@
             margin-right: auto;
             width: 60%;
         }
-        /* Getting user input */
-        .contact-form {
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .contact-form h2 {
-            margin-bottom: 20px;
-        }
-        .contact-form .form-group {
-            margin-bottom: 15px;
-        }
-        .contact-form .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .contact-form .form-group input,
-        .contact-form .form-group textarea {
-            width: 90%;
-            padding: 10px;
-            border: 1px solid #000000;
-            border-radius: 4px;
-        }
-        .contact-form .form-group textarea {
-            resize: vertical;
-            height: 150px;
-        }
-        .contact-form .form-group button {
-            padding: 10px 150px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .contact-form .form-group button:hover {
-            background-color: #0056b3;
-        }
     </style>
 </head>
 <body>
@@ -213,59 +164,18 @@
                 </ul>
             </div>
         </div>
-        <div class="container">
-            <h1 style="text-align: center;">Contact Page</h1>
-        </div>
+        <header>
+            <div class="container">
+                <h1>Welcome to Fred Berberich's site!</h1>
+            </div>
+            
+        </header>
     </header>
-    <nav>
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-    </nav>
-    <main>
-        <div class="background">
-        <div class="contact-form">
-            <h2><div class="center-align">Contact Me</div></h2>
-            <h3>Do not worry! Any information inputed will be encrypted with a secure encryption and stored safely.<h3>
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">                
-                <div class="form-group">
-                    <label for="first-name">First Name</label>
-                    <input type="text" id="firstname" name="firstname" required />
-                </div>
-                <div class="form-group">
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" name="last_name" required>
-                </div>
-                <div class="form-group">
-                    <label for="company-email">Company Email</label>
-                    <input type="email" id="company-email" name="company_email" required>
-                </div>
-                <div class="form-group">
-                    <label for="description">Message</label>
-                    <textarea id="description" name="description" required></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Submit</button>
-                </div>
-            </form>
-            <script>
-                document.getElementById('contactForm').addEventListener('submit', function(event) {
-                  event.preventDefault();
-                  fetch(event.target.action, {
-                    method: event.target.method,
-                    headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-                    body: new URLSearchParams(new FormData(event.target)).toString()
-                  }).then(response => {
-                    if (response.ok) {
-                      window.location.href = '/success.html'; // Redirect to success page
-                    } else {
-                      alert('There was a problem with your submission. Please try again.');
-                    }
-                  });
-                });
-              </script>
+    <h1>Thank You!</h1>
+    <p>Your submission has been received successfully.</p>
+    <p><a href="index.html">Return to Homepage</a></p>
         </div>
-    </div>
-    </main>
+       
+
 </body>
 </html>
