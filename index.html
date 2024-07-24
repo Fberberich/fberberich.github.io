@@ -16,6 +16,13 @@
             padding: 20px;
             text-align: center;
         }
+        .background {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+        }
         .custom-heading {
             font-family: 'Arial', sans-serif;
             font-size: 24px;
@@ -144,6 +151,11 @@
             margin-right: auto;
             width: 60%;
         }
+        /* Added class for right-align */
+        .right-align {
+            text-align: right;
+            margin-right: 20px;
+        }
     </style>
 </head>
 <body>
@@ -168,13 +180,15 @@
             <div class="container">
                 <h1>Welcome to Fred Berberich's site!</h1>
             </div>
-            
+            <div class="center-align"> <!-- Updated class here -->
+                <img src= "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcm1yOHZ0dHhrdWV1ZXFncXhyZTVuanBwNHg0cDV5ajBpb3pvemM0YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Nx0rz3jtxtEre/giphy.gif" width = "200" height = "100">
+            </div>
         </header>
     </header>
     <main>
         <div class="left-align">
             <br>
-
+            <div class="background">
             <p class="custom-heading">Hi!</p>
             <br>
             <p class="custom-heading">I am a Cybersecurity major at Marist College.This is a fun little site I decided to make to help better my coding skills and to teach myself useful coding languages such as javascript and SQL.</p>
@@ -183,9 +197,7 @@
             <br>
             <p class="custom-heading">Hope you Enjoy!</p>
         </div>
-        <div>
-            <img src= "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcm1yOHZ0dHhrdWV1ZXFncXhyZTVuanBwNHg0cDV5ajBpb3pvemM0YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Nx0rz3jtxtEre/giphy.gif" width = "200" height = "100">
-        </div>
+    </div>
     </main>
 </body>
 </html>
