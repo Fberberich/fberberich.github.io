@@ -227,26 +227,40 @@
         <div class="contact-form">
             <h2><div class="center-align">Contact Me</div></h2>
             <h3>Do not worry! Any information inputed will be encrypted with a secure encryption and stored safely.<h3>
-            <form action="YOUR_SERVER_ENDPOINT" method="post">
+            <form id="ContactForm">
                 <div class="form-group">
-                    <label for="first-name">First Name</label>
-                    <input type="text" id="first-name" name="first_name" required>
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" required>
                 </div>
                 <div class="form-group">
-                    <label for="last-name">Last Name</label>
-                    <input type="text" id="last-name" name="last_name" required>
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" required>
                 </div>
                 <div class="form-group">
-                    <label for="company-email">Company Email</label>
-                    <input type="email" id="company-email" name="company_email" required>
+                    <label for="email">Company Email</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea id="description" name="description" required></textarea>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
                 </div>
                 <div class="form-group">
                     <button type="submit">Submit</button>
                 </div>
+                <script>
+                    emailjs.init('lYymCRc4b32kGvvLy'); // Replace with your user ID
+                
+                    document.getElementById('contactForm').addEventListener('submit', function(event) {
+                      event.preventDefault();
+                
+                      emailjs.sendForm('service_kw4bc8b', 'template_dwzaqpr', this)
+                        .then(function() {
+                          window.location.href = '/success.html'; // Redirect to success page
+                        }, function(error) {
+                          alert('Sorry, something went wrong. Please try again.');
+                        });
+                    });
+                  </script>
             </form>
         </div>
     </div>
