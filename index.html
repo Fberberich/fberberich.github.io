@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fred Berberich's Website</title>
     <style>
         /* CSS styles go here */
@@ -9,7 +8,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
+            text-align: center; /* Center the main content */
         }
         header {
             background-color: #dc1919;
@@ -63,64 +62,68 @@
             font-size: 16px;
             margin: 0;
         }
+        /* Creating the hamburger button */
         .container {
-            width: 80%;
-            margin: auto;
-        }
-        .menu-icon {
-            display: none;
+            display: inline-block;
             cursor: pointer;
         }
-        .menu {
+        .dropbtn {
             display: flex;
-            list-style: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 3em; /* Reduced height */
+            width: 3em; /* Reduced width */
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            background: transparent;
+            border-style: none;
+            border-radius: .75em;
+            position: absolute;
         }
-        .menu li {
-            margin-right: 20px;
+        #button-top, #button-mid, #button-bot {
+            height: 3px;
+            width: 20px; /* Adjusted width */
+            background: white;
+            margin: 3px 0; /* Added margin to space the lines */
+            border-radius: 10px;
         }
-        @media (max-width: 768px) {
-            .container {
-                width: 100%;
-            }
-            .menu-icon {
-                display: block;
-            }
-            .menu {
-                display: none;
-                flex-direction: column;
-            }
-            .menu.active {
-                display: flex;
-            }
+        .dropdown {
+            position: relative; /* Changed from inline-block */
+            display: left-align; /* Changed from left */
         }
-        @media (max-width: 480px) {
-            body {
-                font-size: 14px;
-            }
-            .container {
-                width: 100%;
-            }
-        }
-        img {
-            max-width: 100%;
-            height: auto;
+        .dropdown_content {
+            display: none;
+            position: absolute;
+            border-radius: .90em;
+            background-color: #FFFFFF80;
+            min-width: 145px;
+            box-shadow: 0px 20px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
         }
         .dropdown_content ul {
             list-style: none;
-            font-size: 1em;
+            font-size: 2em;
             padding: 0;
         }
         .dropdown_content a {
             color: black;
             text-decoration: none;
             display: block;
-            padding: 5px 0;
+            padding: 5px 0px 0px 0px;
         }
         .dropdown_content a:hover {
             font-weight: bold;
         }
         .dropdown_content a:visited {
             color: black;
+        }
+        .dropdown:hover .dropdown_content {
+            display: block;
+        }
+        .dropdown:hover .dropbtn {
+            background-color: #00000060;
         }
         .popup {
             display: none;
@@ -148,6 +151,11 @@
             margin-right: auto;
             width: 60%;
         }
+        /* Added class for right-align */
+        .right-align {
+            text-align: right;
+            margin-right: 20px;
+        }
     </style>
 </head>
 <body>
@@ -159,7 +167,7 @@
                 <div id="button-bot"></div>
             </button>
             <div class="dropdown_content">
-                <ul class="menu">
+                <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="AboutPage.html">About</a></li>
                     <li><a href="ProjectPage.html">Projects</a></li>
@@ -168,30 +176,28 @@
                 </ul>
             </div>
         </div>
-        <h1>Welcome to Fred Berberich's site!</h1>
-        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcm1yOHZ0dHhrdWV1ZXFncXhyZTVuanBwNHg0cDV5ajBpb3pvemM0YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Nx0rz3jtxtEre/giphy.gif" width="200" height="100" alt="Welcome GIF">
+        <header>
+            <div class="container">
+                <h1>Welcome to Fred Berberich's site!</h1>
+            </div>
+            <div class="center-align"> <!-- Updated class here -->
+                <img src= "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcm1yOHZ0dHhrdWV1ZXFncXhyZTVuanBwNHg0cDV5ajBpb3pvemM0YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Nx0rz3jtxtEre/giphy.gif" width = "200" height = "100">
+            </div>
+        </header>
     </header>
     <main>
         <div class="left-align">
             <br>
             <div class="background">
-                <p class="custom-heading">Hi!</p>
-                <br>
-                <p class="custom-heading">I am a Cybersecurity major at Marist College. This is a fun little site I decided to make to help better my coding skills and to teach myself useful coding languages such as JavaScript and SQL.</p>
-                <br>
-                <p class="custom-heading">The plan is to have this run off of AWS or any type of PaaS, to make it accessible to the public. Here you can learn a little more about me and the many projects I've been able to get my hands on. Feel free to check out my "about me" to get to know me a little better personally, or try looking at some fun projects I have worked on in my "Projects" page. Please feel free to take a look at my "Contacts page". I plan to link it up to a database and encrypt any data that is inputted there so no personal or just general information will be leaked (Hopefully)!!!</p>
-                <br>
-                <p class="custom-heading">Hope you Enjoy!</p>
-            </div>
+            <p class="custom-heading">Hi!</p>
+            <br>
+            <p class="custom-heading">I am a Cybersecurity major at Marist College.This is a fun little site I decided to make to help better my coding skills and to teach myself useful coding languages such as javascript and SQL.</p>
+            <br>
+            <p class="custom-heading">The plan is to have this run off of AWS or any type of PaaS, to make it accessable to the public. Here you can learn a little more about me and the many projects I've been able to get my hands on. Feel free to check out my "about me" to get to know me a little better personally, or try looking at some fun projects I have worked on in my "Projects" page. Please feel free to take a look at my "Contacts page". I plan to link it up to a database and encrypt any data that is inputed there so no personal or just general inforamtion will not be leaked (Hopefully)!!! </p>
+            <br>
+            <p class="custom-heading">Hope you Enjoy!</p>
         </div>
+    </div>
     </main>
-    <script>
-        const menuIcon = document.querySelector('.dropbtn');
-        const menu = document.querySelector('.menu');
-
-        menuIcon.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
-    </script>
 </body>
 </html>
