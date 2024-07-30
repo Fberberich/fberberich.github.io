@@ -87,8 +87,8 @@
         }
         .dropdown {
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
+            top: 20px;
+            right: 20px;
         }
         .dropdown_content {
             display: none;
@@ -161,8 +161,10 @@
             padding: 10px;
         }
         body.mobile .dropdown {
-            left: 50%;
-            transform: translate(-50%, -50%);
+            position: relative;
+            top: auto;
+            right: auto;
+            margin-top: 20px;
         }
         body.mobile .background {
             padding: 10px;
@@ -181,8 +183,7 @@
         }
         body.desktop .dropdown {
             top: 20px;
-            right: 20px;
-            transform: none;
+            left: 20px;
         }
         body.desktop .background {
             padding: 20px;
@@ -192,6 +193,12 @@
 </head>
 <body>
     <header>
+        <div class="container">
+            <h1>Welcome to Fred Berberich's site!</h1>
+        </div>
+        <div class="center-align">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcm1yOHZ0dHhrdWV1ZXFncXhyZTVuanBwNHg0cDV5ajBpb3pvemM0YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Nx0rz3jtxtEre/giphy.gif" width="200" height="100">
+        </div>
         <div class="dropdown">
             <button class="dropbtn" id="hamburger-button">
                 <div id="button-top"></div>
@@ -207,12 +214,6 @@
                     <li><a href="ResumePage.html">Resume</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="container">
-            <h1>Welcome to Fred Berberich's site!</h1>
-        </div>
-        <div class="center-align">
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcm1yOHZ0dHhrdWV1ZXFncXhyZTVuanBwNHg0cDV5ajBpb3pvemM0YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Nx0rz3jtxtEre/giphy.gif" width="200" height="100">
         </div>
     </header>
     <main>
