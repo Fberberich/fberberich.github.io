@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+<script>
+    let w = window.innerWidth;
+    let h = window.innerHeight;
+    window.resizeTo(w,h);
+</script>
 <head>
     <title>Fred Berberich's Website</title>
     <style>
@@ -159,10 +164,6 @@
     </style>
 </head>
 <body>
-    <script>
-        document.getElementById("demo").innerHTML = 
-        "Screen width is " + screen.width;
-        </script>
     <header>
         <div class="dropdown">
             <button class="dropbtn" id="hamburger-button">
