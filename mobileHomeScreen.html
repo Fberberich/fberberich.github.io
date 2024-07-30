@@ -1,18 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <script>
-        function isMobileDevice() {
-            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            if (isMobileDevice()) {
-                document.body.classList.add('mobile');
-            } else {
-                document.body.classList.add('desktop');
-            }
-        });
-    </script>
 <head>
     <title>Fred Berberich's Website</title>
     <style>
@@ -27,6 +14,7 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+            position: relative;
         }
         .background {
             border: 1px solid #ccc;
@@ -89,9 +77,6 @@
             background: transparent;
             border-style: none;
             border-radius: .75em;
-            position: absolute;
-            top: 10px;
-            right: 10px;
         }
         #button-top, #button-mid, #button-bot {
             height: 3px;
@@ -101,7 +86,9 @@
             border-radius: 10px;
         }
         .dropdown {
-            position: relative;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
         }
         .dropdown_content {
             display: none;
@@ -173,10 +160,9 @@
         body.mobile .container {
             padding: 10px;
         }
-        body.mobile .dropbtn {
-            top: 10px;
-            text-align: center;
-
+        body.mobile .dropdown {
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         body.mobile .background {
             padding: 10px;
@@ -193,9 +179,10 @@
         body.desktop .container {
             padding: 20px;
         }
-        body.desktop .dropbtn {
+        body.desktop .dropdown {
             top: 20px;
-            left: 20px;
+            right: 20px;
+            transform: none;
         }
         body.desktop .background {
             padding: 20px;
@@ -242,5 +229,18 @@
             </div>
         </div>
     </main>
+    <script>
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            if (isMobileDevice()) {
+                document.body.classList.add('mobile');
+            } else {
+                document.body.classList.add('desktop');
+            }
+        });
+    </script>
 </body>
 </html>
