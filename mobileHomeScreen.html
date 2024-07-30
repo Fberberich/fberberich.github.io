@@ -71,8 +71,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 3em;
-            width: 3em;
+            height: 4em; /* Adjusted height */
+            width: 4em; /* Adjusted width */
             cursor: pointer;
             background: transparent;
             border-style: none;
@@ -80,11 +80,11 @@
             position: absolute;
         }
         #button-top, #button-mid, #button-bot {
-            height: 5px;
-            width: 30px;
+            height: 4px; /* Adjusted height */
+            width: 25px; /* Adjusted width */
             background: white;
-            margin: 3px 0;
-            border-radius: 1px;
+            margin: 4px 0; /* Adjusted margin */
+            border-radius: 10px;
         }
         .dropdown {
             position: absolute;
@@ -164,12 +164,16 @@
         body.mobile .dropdown {
             position: relative;
             top: auto;
-            left: auto;
+            right: auto;
             margin-top: 20px;
         }
         body.mobile .background {
             padding: 10px;
             margin: 10px;
+        }
+        body.mobile .dropdown {
+            margin-top: 20px;
+            text-align: center;
         }
 
         /* Desktop Styles */
@@ -191,6 +195,8 @@
             margin: 20px;
         }
     </style>
+    <!-- Adding meta tag to control viewport settings for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
     <header>
