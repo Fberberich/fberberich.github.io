@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html>
+    <script>
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            if (isMobileDevice()) {
+                document.body.classList.add('mobile');
+            } else {
+                document.body.classList.add('desktop');
+            }
+        });
+    </script>
 <head>
     <title>Fred Berberich's Website</title>
     <style>
@@ -162,7 +175,7 @@
         }
         body.mobile .dropbtn {
             top: 10px;
-            right: 10px;
+            left: 10px;
         }
         body.mobile .background {
             padding: 10px;
@@ -228,18 +241,5 @@
             </div>
         </div>
     </main>
-    <script>
-        function isMobileDevice() {
-            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            if (isMobileDevice()) {
-                document.body.classList.add('mobile');
-            } else {
-                document.body.classList.add('desktop');
-            }
-        });
-    </script>
 </body>
 </html>
