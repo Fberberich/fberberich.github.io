@@ -170,8 +170,8 @@ body.mobile .background {
     text-align: left;
     width: 90%;
 }
-body.mobile .dropdown {
-    margin-top: 20px;
+body.mobile .dropdown_content {
+    width: 100%;
     text-align: center;
 }
 body.mobile .left-align {
@@ -216,7 +216,7 @@ body.desktop .background {
     font-size: 2em;
     position: absolute;
     top: 20px;
-    left: 20px;
+    right: 20px; /* Adjusted position to top right */
     cursor: pointer;
     color: white;
 }
