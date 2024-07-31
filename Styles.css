@@ -165,11 +165,17 @@ body.mobile .dropdown {
 body.mobile .background {
     padding: 40px;
     margin: 40px;
+    text-align: left;
+    width: 90%;
 }
 body.mobile .dropdown {
     margin-top: 20px;
     text-align: center;
 }
+body.mobile .left-align {
+    width: 90%;
+}
+
 
 /* Desktop Styles */
 body.desktop {
