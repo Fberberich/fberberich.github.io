@@ -86,7 +86,7 @@ section p {
 .dropdown {
     position: absolute;
     top: 20px;
-    right: 20px;
+    left: 20px; /* Adjusted to top left corner */
 }
 .dropdown_content {
     display: none;
@@ -159,9 +159,9 @@ body.mobile .container {
     padding: 10px;
 }
 body.mobile .dropdown {
-    position: relative;
-    top: auto;
-    right: auto;
+    position: absolute;
+    top: 20px;
+    left: 20px;
     margin-top: 20px;
 }
 body.mobile .background {
@@ -197,7 +197,7 @@ body.desktop {
 body.desktop .custom-heading {
     font-size: 24px;
 }
-body.desktop .container {
+body.desktop .container { 
     padding: 10px;
 }
 body.desktop .dropdown {
@@ -207,4 +207,16 @@ body.desktop .dropdown {
 body.desktop .background {
     padding: 20px;
     margin: 20px;
+}
+
+/* Close Button Styles */
+.close-button {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    color: white;
 }

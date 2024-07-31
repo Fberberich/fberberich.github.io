@@ -31,6 +31,7 @@
                 </ul>
             </div>
         </div>
+        <button id="close-button" class="close-button" style="display:none;">X</button>
     </header>
     <main>
         <div class="left-align">
@@ -54,8 +55,17 @@
         document.addEventListener("DOMContentLoaded", function() {
             if (isMobileDevice()) {
                 document.body.classList.add('mobile');
-                document.dropbtn.classList.add('mobile');
-                
+                document.querySelector('.dropbtn').classList.add('mobile');
+                document.querySelector('#hamburger-button').addEventListener('click', function() {
+                    document.querySelector('.dropdown_content').style.display = 'block';
+                    document.querySelector('#close-button').style.display = 'block';
+                    document.querySelector('#hamburger-button').style.display = 'none';
+                });
+                document.querySelector('#close-button').addEventListener('click', function() {
+                    document.querySelector('.dropdown_content').style.display = 'none';
+                    document.querySelector('#close-button').style.display = 'none';
+                    document.querySelector('#hamburger-button').style.display = 'block';
+                });
             } else {
                 document.body.classList.add('desktop');
             }
