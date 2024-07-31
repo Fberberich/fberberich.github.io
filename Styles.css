@@ -147,6 +147,13 @@ section p {
 }
 
 /* Mobile Styles */
+header.mobile {
+    background-color: #dc1919;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+}
 body.mobile {
     font-size: 14px;
 }
