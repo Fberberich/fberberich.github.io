@@ -20,6 +20,14 @@ header {
     margin-bottom: 20px;
     background-color: #f9f9f9;
 }
+/*Background for resume*/
+.imagebackground {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
 .custom-heading {
     font-family: 'Arial', sans-serif;
     font-size: 24px;
