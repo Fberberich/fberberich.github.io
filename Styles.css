@@ -285,7 +285,8 @@ body.mobile .left-align {
         left: 10px;
     }
     .resume {
-        content: url('Resume.png'); /* Replace with your mobile-optimized image */
+        width: 150;
+        height: 200;   
     }
 }
 
