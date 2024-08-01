@@ -147,6 +147,42 @@ section p {
     text-align: right;
     margin-right: 20px;
 }
+.project {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(201, 122, 122, 0.2); /* Add shadow to images */
+}
+.project h2 {
+    margin-top: 0;
+}
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc1919;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to buttons */
+}
+.button:hover {
+    background-color: #d67d7d;
+}
 
 /* Mobile Styles */
 body.mobile {
