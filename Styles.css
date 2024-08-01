@@ -107,6 +107,7 @@ section p {
     text-decoration: none;
     display: block;
     padding: 5px 0px 0px 0px;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 .dropdown_content a:hover {
     font-weight: bold;
