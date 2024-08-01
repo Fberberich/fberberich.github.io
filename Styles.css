@@ -257,6 +257,14 @@ body.mobile .left-align {
     border-style: none;
     border-radius: .75em;
 }
+.resume-container {
+    padding: 20px;
+}
+
+.resume {
+    max-width: 100%;
+    height: auto;
+}
 @media (max-width: 768px) {
     header {
         padding-top: 60px; /* Add padding to make space for the button */
@@ -275,6 +283,9 @@ body.mobile .left-align {
         position: absolute;
         top: 10px; /* Adjust the position of the dropdown button */
         left: 10px;
+    }
+    .resume {
+        content: url('mobile-resume.jpg'); /* Replace with your mobile-optimized image */
     }
 }
 
