@@ -167,11 +167,12 @@ section p {
     border: none;
     margin-top: 10px;
 }
+
 .left-align {
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 90%; /*Edit this for how much the text will spell across in a single line*/
 }
 .right-align {
     text-align: right;
