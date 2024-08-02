@@ -46,6 +46,11 @@
             </div>
         </div>
     </main>
+    <script>
+    function isMobileDevice() {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+    }
+    </script>
 </body>
 <footer>
     <p>Site Created by Fred Berberich</p>
