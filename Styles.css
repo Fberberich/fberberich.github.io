@@ -29,8 +29,8 @@ header {
     background-color: #f9f9f9;
 }
 .custom-heading {
-    font-family: 'Arial', sans-serif;
-    font-size: 24px;
+    font-family: 'Arial';
+    font-size: 16px;
 }
 nav {
     background-color: #ccc;
