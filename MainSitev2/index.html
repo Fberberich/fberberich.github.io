@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="testfilestyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Fred Berberich's Website</title>
+    <!-- Adding meta tag to control viewport settings for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to Fred Berberich's site!</h1>
+        </div>
+    </header>
+    <div class="topnav" id="myTopnav">
+      <a href="index.html" class="active">Home</a>
+      <a href="AboutPage.html">About</a>
+      <a href="ProjectPage.html">Projects</a>
+      <a href="Contactpage.html">Contact Me</a>
+      <a href="ResumePage.html">Resume</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <main>
+      <br>
+      <br>
+      <div class="background">
+      <div class="left-align">
+        <img class="headshot" src="Headshot.jpg" alt="Headshot">    
+      </div>
+      <div class="left-align">
+        <br>
+        <p class="custom-heading">Hi! I am a Cybersecurity major at Marist College. I decided to make this site to help better my coding skills and to teach myself useful coding languages such as JavaScript and SQL.</p>
+        <br>
+        <p class="custom-heading">The plan is to have this run off of any type of PaaS, so the site can be accessible to the public. Here you can learn a little more about me and the many projects I've been able to get my hands on.</p>
+        <br>
+        <p class="custom-heading">The page that I am most excited for is the "Contact me" page. I have a email system created that when the form is filled out, the data is encrypted and does not get decrypted until it reaches my email.That way, no personal or just general information will be leaked!</p>
+        <br>
+        <p class="custom-heading">Hope you Enjoy!</p>       
+          </div>
+      </div>
+  <!-- Footer -->
+  <div id="footer">
+    <div id="bar">
+        <div id="Footer1">
+        <p>@ 2024 Fred Berberich <br> Personal Portfolio</p> 
+        </div>
+        <div id="Footer2"> 
+          <br>
+          <br>
+          <br>
+          <br>
+          Contact Me:<a href="mailto:Frederick.Berberich1@marist.edu" id="Footer2"> Frederick.Berberich1@marist.edu </a>
+          <br>
+          <br>
+          <div class="right-align">
+            <!-- GitHub Button -->
+            <a href="https://github.com/Fberberich" target="_blank" class="social-button">
+              <img src="githublogo.png" alt="GitHub" class="logo">
+          </a>
+          <!-- LinkedIn Button -->
+          <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank" class="social-button">
+              <img src="linkinLogo.png" alt="LinkedIn" class="logo">
+          </a>
+          </div>
+          <br>
+    </div>
+</div>
+  </main>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    </script>
+</body>
+</html>
