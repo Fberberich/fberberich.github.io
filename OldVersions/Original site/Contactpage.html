@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="Styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="dropdown">
+            <button class="dropbtn" id="hamburger-button">
+                <div id="button-top"></div>
+                <div id="button-mid"></div>
+                <div id="button-bot"></div>
+            </button>
+            <div class="dropdown_content">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutPage.html">About</a></li>
+                    <li><a href="ProjectPage.html">Projects</a></li>
+                    <li><a href="Contactpage.html">Contact Me</a></li>
+                    <li><a href="ResumePage.html">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <h1 style="text-align: center;">Contact Page</h1>
+        </div>
+    </header>
+    <main>
+    <div class="background">
+        <div class="contact-form">
+            <h2><div class="center-align">Contact Me</div></h2>
+            <h3>Do not worry! Any information inputed will be encrypted with a secure encryption and stored safely.<h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname" name="firstname" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" name="lastname" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+  <script>
+    emailjs.init('lYymCRc4b32kGvvLy'); // Replace with your user ID
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_kw4bc8b', 'template_dwzaqpr', this)
+        .then(function() {
+          window.location.href = '/success.html'; // Redirect to success page
+        }, function(error) {
+          alert('Sorry, something went wrong. Please try again.');
+        });
+    });
+  </script>
+</body>
+</html>
