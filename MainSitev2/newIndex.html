@@ -21,15 +21,20 @@
         }
         .container {
             display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+            justify-content: space-around; /* Evenly spaces the boxes */
+            gap: 1rem;
             padding: 2rem;
+            flex-wrap: wrap; /* Ensures responsiveness */
         }
         section {
             background: white;
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1; /* Flexible size */
+            max-width: 30%; /* Limits box width */
+            box-sizing: border-box; /* Includes padding in width */
+            text-align: center;
         }
         h2 {
             margin-top: 0;
@@ -58,6 +63,14 @@
             padding: 1rem;
             margin-top: 2rem;
         }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stacks vertically on smaller screens */
+            }
+            section {
+                max-width: 100%; /* Full width for small screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -77,7 +90,6 @@
         <section>
             <h2>Proposal</h2>
             <p>Click the button below to view my proposal document:</p>
-            <!-- Button to open Proposal PDF -->
             <a href="path/to/your-proposal.pdf" target="_blank" class="btn">Click Me to View Proposal</a>
         </section>
 
@@ -85,7 +97,6 @@
         <section>
             <h2>Board</h2>
             <p>Click the button below to view my presentation board:</p>
-            <!-- Button to open Board PDF -->
             <a href="path/to/your-board.pdf" target="_blank" class="btn">Click Me to View Board</a>
         </section>
     </div>
