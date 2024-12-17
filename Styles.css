@@ -196,3 +196,83 @@ section h2 {
     margin: 0 0 10px 0;
 }
 
+/*Styles for Project Page*/
+/* CSS for the "Projects" Page */
+.project {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.project img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(201, 122, 122, 0.2); /* Add shadow to images */
+}
+.project h2 {
+    margin-top: 0;
+}
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-gap: 20px; /* Adds space between projects */
+    padding: 20px;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc1919;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow to buttons */
+}
+.button:hover {
+    background-color: #d67d7d;
+}
+
+/*CSS used in BLE page*/
+/*CSS used in BLE Projects Page*/
+.nice-link {
+    color: white; 
+    background-color: #dc1919; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.nice-link:hover {
+    background-color: #dc1919;
+    transform: scale(1.05);
+}
+.embedded-content { /*Controls the size and characteristics of Award image*/
+    width: 15%;
+    height: 250px;
+    border: none;
+    margin-top: 10px;
+}
+.embedded-content2 { /*Controls the size and characteristics of Award image*/
+    width: 160%;
+    height: 300px;
+    border: none;
+    margin-top: 10px;
+}
+
+.left-align {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; /*Edit this for how much the text will spell across in a single line*/
+}
+.right-align {
+    text-align: right;
+    margin-right: 20px;
+}
+/*BLE page end*/

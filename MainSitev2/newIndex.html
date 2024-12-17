@@ -3,93 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="Styles.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <title>My Presentation Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 2rem;
+        }
+        section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-top: 0;
+            color: #0056b3;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            color: white;
+            background-color: #0056b3;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #003d80;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Your place to learn more about me and my work</p>
+        <h1>My Presentation</h1>
+        <p>Welcome to my presentation page!</p>
     </header>
-    <div class="topnav" id="myTopnav">
-        <a href="index.html" class="active">Home</a>
-        <a href="AboutPage.html">About</a>
-        <a href="ProjectPage.html">Projects</a>
-        <a href="Contactpage.html">Contact Me</a>
-        <a href="ResumePage.html">Resume</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    <main>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="background">
-        <div class="contact-form">
-            <h2 style="text-align: center;">Contact Me</h2>
-            <h3>Do not worry! Any information inputed will be encrypted with a secure encryption and stored safely.<h3>
-                <br>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="firstname">First Name:</label>
-                        <input type="text" id="firstname" name="firstname" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="lastname">Last Name:</label>
-                        <input type="text" id="lastname" name="lastname" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <div class="form-group" style="text-align: center;">
-                        <button type="submit">Send</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </main>
-    <!-- Footer Section -->
-     <footer class="footer">
-        <p>Connect with me: 
-            <a href="mailto:Frederick.Berberich1@marist.edu">Email</a> |
-            <a href="https://github.com/Fberberich" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        </p>
-        <p>&copy; 2024 Fred Berberich | Personal Portfolio</p>
+
+    <div class="container">
+        <!-- Award Section -->
+        <section>
+            <h2>Award</h2>
+            <p>Describe your award here. For example, "I received the Excellence in Communication Award for outstanding contributions to mass media research."</p>
+        </section>
+
+        <!-- Proposal Section -->
+        <section>
+            <h2>Proposal</h2>
+            <p>Click the button below to view my proposal document:</p>
+            <!-- Button to open Proposal PDF -->
+            <a href="path/to/your-proposal.pdf" target="_blank" class="btn">Click Me to View Proposal</a>
+        </section>
+
+        <!-- Board Section -->
+        <section>
+            <h2>Board</h2>
+            <p>Click the button below to view my presentation board:</p>
+            <!-- Button to open Board PDF -->
+            <a href="path/to/your-board.pdf" target="_blank" class="btn">Click Me to View Board</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
     </footer>
-</body>
-<script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
-<script>
-    emailjs.init('lYymCRc4b32kGvvLy'); // Replace with your user ID// 
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    emailjs.sendForm('service_kw4bc8b', 'template_dwzaqpr', this)
-    .then(function() {
-        window.location.href = '/success.html'; // Redirect to success page
-        }, function(error) {
-            alert('Sorry, something went wrong. Please try again.');
-        });
-    });
-</script>
 </body>
 </html>
