@@ -3,106 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Presentation Page</title>
+    <title>Three Works Showcase</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #0056b3;
-            color: white;
-            padding: 1rem;
-            text-align: center;
         }
         .container {
             display: flex;
-            justify-content: space-around; /* Evenly spaces the boxes */
-            gap: 1rem;
-            padding: 2rem;
-            flex-wrap: wrap; /* Ensures responsiveness */
+            gap: 20px;
         }
-        section {
-            background: white;
-            padding: 1.5rem;
+        .box {
+            width: 400px; /* Increased width */
+            min-height: 450px; /* Adjusted height */
+            background-color: #fff;
+            border: 1px solid #ddd;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            flex: 1; /* Flexible size */
-            max-width: 30%; /* Limits box width */
-            box-sizing: border-box; /* Includes padding in width */
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-        h2 {
-            margin-top: 0;
-            color: #0056b3;
+        .box img {
+            width: 100%;
+            height: 250px; /* Increased image height */
+            object-fit: cover;
         }
-        .btn {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-            color: white;
-            background-color: #0056b3;
+        .box h3 {
+            margin: 15px 0;
+        }
+        .box p {
+            margin: 0 15px 15px;
+            color: #555;
+        }
+        .box button {
+            margin-bottom: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
             border: none;
             border-radius: 5px;
-            text-decoration: none;
             cursor: pointer;
-            transition: background 0.3s ease;
         }
-        .btn:hover {
-            background-color: #003d80;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column; /* Stacks vertically on smaller screens */
-            }
-            section {
-                max-width: 100%; /* Full width for small screens */
-            }
+        .box button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>My Presentation</h1>
-        <p>Welcome to my presentation page!</p>
-    </header>
-
     <div class="container">
-        <!-- Award Section -->
-        <section>
-            <h2>Award</h2>
-            <p>Describe your award here. For example, "I received the Excellence in Communication Award for outstanding contributions to mass media research."</p>
-        </section>
-
-        <!-- Proposal Section -->
-        <section>
-            <h2>Proposal</h2>
-            <p>Click the button below to view my proposal document:</p>
-            <a href="path/to/your-proposal.pdf" target="_blank" class="btn">Click Me to View Proposal</a>
-        </section>
-
-        <!-- Board Section -->
-        <section>
-            <h2>Board</h2>
-            <p>Click the button below to view my presentation board:</p>
-            <a href="path/to/your-board.pdf" target="_blank" class="btn">Click Me to View Board</a>
-        </section>
+        <div class="box">
+            <img src="work1.jpg" alt="Work 1">
+            <h3>Work 1</h3>
+            <p>Description of the first work.</p>
+            <button onclick="location.href='work1.html'">Learn More</button>
+        </div>
+        <div class="box">
+            <img src="work2.jpg" alt="Work 2">
+            <h3>Work 2</h3>
+            <p>Description of the second work.</p>
+            <button onclick="location.href='work2.html'">Learn More</button>
+        </div>
+        <div class="box">
+            <img src="work3.jpg" alt="Work 3">
+            <h3>Work 3</h3>
+            <p>Description of the third work.</p>
+            <button onclick="location.href='work3.html'">Learn More</button>
+        </div>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
-    </footer>
 </body>
 </html>
