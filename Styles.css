@@ -328,3 +328,22 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+/*BGP Page ends*/
+
+/*Resume Page CSS begins*/
+.resumeimagebackground {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+}
+.resume {
+    max-width: 100%;
+    height: auto;
+}
+.resume-container {
+    padding: 20px;
+}
+
+/**/
