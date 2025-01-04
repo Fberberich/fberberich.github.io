@@ -1,13 +1,55 @@
-<div class="resume-container">
-    <h2>My Resume</h2>
-    <div class="resume-frame">
-        <img src="resume.png" alt="My Resume" class="resume-image">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Fred Berberich's Resume</h1>
+        <p>Copy of my resume</p>
+    </header>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="AboutPage.html">About</a>
+        <a href="ProjectPage.html">Projects</a>
+        <a href="ContactPage.html">Contact Me</a>
+        <a href="Resume.html">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="resumeimagebackground">
+            <div class="resume">
+                <img src="Images/ResumePage/winterResume2024.png" alt="Resume" class="resume">
+            </div>
+        </div>
     </div>
-    <p>Click on the resume to view in full size.</p>
-</div>
-
-<div class="resumeimagebackground">
-    <div class="resume">
-        <img src="Resumev2.png" alt="Resume" class="resume">
-    </div>
-</div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Connect with me: 
+            <a href="mailto:Frederick.Berberich1@marist.edu">Email</a> |
+            <a href="https://github.com/Fberberich" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </p>
+        <p>&copy; 2024 Fred Berberich | Personal Portfolio</p>
+    </footer>
+</body>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+</script>
+</html>
