@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Your place to learn more about me and my work</p>
+    </header>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="AboutPage.html">About</a>
+        <a href="ProjectPage.html">Projects</a>
+        <a href="ContactPage.html">Contact Me</a>
+        <a href="Resume.html">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    <!-- Main Content -->
+    <div class="main-container">
+        <div class="profile-image">
+            <img src="Images/HomePage/Headshot.jpg" alt="Headshot">
+        </div>
+        <div class="profile-content">
+            <h2>Hi, I'm Fred Berberich</h2>
+            <p>
+                I am a Cybersecurity major with a passion for coding and building projects. 
+                This portfolio showcases my work, skills, and personal journey in the world of technology.
+            </p>
+            <p>
+                Take a look around, and feel free to reach out to connect!
+            </p>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Connect with me: 
+            <a href="mailto:Frederick.Berberich1@marist.edu">Email</a> |
+            <a href="https://github.com/Fberberich" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </p>
+        <p>&copy; 2024 Fred Berberich | Personal Portfolio</p>
+    </footer>
+</body>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+</script>
+</html>

@@ -346,4 +346,42 @@ section {
     padding: 10px;
 }
 
-/**/
+/*Windows Active Directory Page Begin*/
+.wadimagebackground {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+.screenshot{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.screenshot img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+.video-container{
+    text-align: center;
+    margin: 20px 0;
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
