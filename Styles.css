@@ -345,6 +345,24 @@ section {
 .resume-container {
     padding: 10px;
 }
+.download-container {
+    text-align: center;
+}
+
+.download-container a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #dc1919;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.download-container a:hover {
+    background-color: #059669;
+}
 
 /*Windows Active Directory Page Begin*/
 .wadimagebackground {
