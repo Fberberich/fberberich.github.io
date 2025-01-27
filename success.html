@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <title>Form Submitted Successfully</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Your place to learn more about me and my work</p>
+    </header>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active">Home</a>
+        <a href="AboutPage.html">About</a>
+        <a href="ProjectPage.html">Projects</a>
+        <a href="ContactPage.html">Contact Me</a>
+        <a href="Resume.html">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    <main>
+    <div class="success-body">
+         <div class="success-container">
+        <h1>Success!</h1>
+        <p>Your form has been submitted successfully. Thank you for your response!</p>
+        <a href="index.html">Go Back to Home</a>
+    </div>
+    </div>
+    </main>
+   <!-- Footer Section -->
+   <footer class="footer">
+    <p>Connect with me: 
+        <a href="mailto:Frederick.Berberich1@marist.edu">Email</a> 
+        <a href="https://github.com/Fberberich" target="_blank"><i class="fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    </p>
+    <p>&copy; 2024 Fred Berberich | Personal Portfolio</p>
+</footer>
+</body>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+</script>
+</html>
