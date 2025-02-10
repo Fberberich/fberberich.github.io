@@ -505,3 +505,33 @@ kalivideo {
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
+
+/*CSS for about page*/
+.aboutprofile-image {
+    flex: 1;
+    max-width: 200px;
+}
+
+.aboutprofile-image img {
+    width: 100%;
+    border-radius: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.aboutprofile-content {
+    flex: 2;
+    max-width: 1000px;
+    text-align: left;
+}
+
+.aboutprofile-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #dc1919;
+    text-align: center;
+}
+
+.profile-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
