@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Projects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <style>
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        .content {
+            background: transparent;
+            padding: 20px;
+        }
+        .project {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .project-image {
+            width: 100%;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .project img {
+            max-width: 800px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .project-content {
+            text-align: center;
+        }
+        .project h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        .project h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 100px;
+            height: 3px;
+            background-color: #dc1919;
+            transform: translateX(-50%);
+        }
+        .project p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-size: 16px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #dc1919;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border: 2px solid #dc1919;
+        }
+        .button:hover {
+            background-color: transparent;
+            color: #dc1919;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Machine Learning Research</h1>
+        <p>Exploring AI and Machine Learning Applications</p>
+    </header>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="ProjectPage.html">Projects</a>
+        <a href="ContactPage.html">Contact Me</a>
+        <a href="Resume.html">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="project">
+                <div class="project-content">
+                    <h2>Enhanced Machine Learning Model</h2>
+                </div>
+                <div class="project-image">
+                    <img src="Images/ProjectPage/NewerModel.png" alt="Newer ML Model">
+                </div>
+                <div class="project-content">
+                    <p>Since we at the time didn't have more malware logs, we decided to remove non-malware logs. This shows that if we recieve more trojan malware logs, we would be able to make our model more accurate and that our project overall has room to grow.</p>
+                </div>
+            </div>
+            
+            <div class="project">
+                <div class="project-content">
+                    <h2>Original Machine Learning Implementation</h2>
+                </div>
+                <div class="project-image">
+                    <img src="Images/ProjectPage/OlderModel.png" alt="Original ML Model">
+                </div>
+                <div class="project-content">
+                    <p>The initial implementation of our machine learning model, establishing the foundation for our research. This version helped us identify areas of improvements such as finding ways to work around found issues such as data bias towards non-malware data.</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <h2>Mac Malware Analysis Research</h2>
+                </div>
+                <div class="project-image">
+                    <img src="Images/ProjectPage/Mac Malware Poster.png" alt="Mac Malware Research Poster">
+                </div>
+                <div class="project-content">
+                    <p>Research poster presenting findings on Mac malware detection and analysis techniques. This study explores innovative approaches to identifying and mitigating security threats.</p>
+                    <a href="#" class="button">View Full Poster</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <h2>Future Research: Creating similar models for other types of malware</h2>
+                </div>
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/800x400?text=Deep+Learning" alt="Future Deep Learning Project">
+                </div>
+                <div class="project-content">
+                    <p>Upcoming research focusing on data collection and creating models similar to the trojan malware model but with out types of malware (Spyware, Adware, etc.)</p>
+                    <a href="#" class="button">Coming Soon</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-content">
+                    <h2>Overall Goals for the Malware ML project</h2>
+                </div>
+                <div class="project-image">
+                    <img src="https://via.placeholder.com/800x400?text=AI+Security" alt="AI Security Research">
+                </div>
+                <div class="project-content">
+                    <p>Overall, the project would lead to the creation of a malware detection system for Apple Macbook viruses. The idea currently is to achieve this by using Mult-level Classification.</p>
+                    <a href="#" class="button">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Connect with me: 
+            <a href="mailto:Frederick.Berberich1@marist.edu">Email</a> 
+            <a href="https://github.com/Fberberich" target="_blank"><i class="fa fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </p>
+        <p>&copy; 2024 Fred Berberich | Machine Learning Portfolio</p>
+    </footer>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>
