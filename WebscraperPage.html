@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webscraper Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Fred Berberich Projects</h1>
+        <p>Your place to learn more about me and my work</p>
+    </header>
+
+    <!-- Navigation -->
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="ProjectPage.html">Projects</a>
+        <a href="ContactPage.html">Contact Me</a>
+        <a href="Resume.html">Resume</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="project-container">
+        <div class="project-header">
+            <h2>Web Scraper Project</h2>
+        </div>
+
+        <div class="project-section">
+            <h3>Project Overview</h3>
+            <img src="Images/ProjectPage/Webscraper_home.png" alt="Webscraper Home Interface">
+            <p>This web scraper application provides an intuitive interface for extracting data from websites. With a user-friendly design, it allows users to easily input target URLs and specify the data they want to collect.</p>
+        </div>
+
+        <div class="project-section">
+            <h3>Scraping in Action</h3>
+            <img src="Images/ProjectPage/Webscraper_scrape.png" alt="Webscraper in Action">
+            <p>The scraping process is visualized in real-time, showing users exactly what data is being collected. The application handles various types of web content and maintains organized data collection.</p>
+        </div>
+
+        <div class="project-section">
+            <h3>Data Analysis</h3>
+            <img src="Images/ProjectPage/Webscraper_analysis.png" alt="Data Analysis View">
+            <p>After collection, the data is presented in a clean, organized format for analysis. Users can export the data in various formats for further processing or immediate use.</p>
+        </div>
+
+        <div class="project-section">
+            <h3>Project Demo</h3>
+            <video controls>
+                <source src="Images/ProjectPage/Video for webscraper page.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fred Berberich. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>
