@@ -204,21 +204,36 @@ section h2 {
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 800px;
+    margin: auto;
 }
 .project img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(201, 122, 122, 0.2); /* Add shadow to images */
+    box-shadow: 0 4px 8px rgba(201, 122, 122, 0.2);
+    object-fit: cover;
+    margin: 0 auto;
 }
 .project h2 {
     margin-top: 0;
+    font-size: 1.5rem;
+}
+.project p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 10px 0;
 }
 .content {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    grid-gap: 20px; /* Adds space between projects */
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
     padding: 20px;
+    justify-items: stretch;
 }
 .button {
     display: inline-block;
