@@ -612,3 +612,125 @@ kalivideo {
     font-size: 1.1rem;
     margin-bottom: 1rem;
 }
+
+/* Machine Learning Project Styles */
+.ml-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.ml-content {
+    background: transparent;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.ml-project {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.ml-project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.ml-project-image {
+    width: 100%;
+    margin-bottom: 25px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.ml-project img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.ml-project-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.ml-project h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+.ml-project h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100px;
+    height: 3px;
+    background-color: #dc1919;
+    transform: translateX(-50%);
+}
+
+.ml-project p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 16px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ml-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #dc1919;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 2px solid #dc1919;
+    margin-top: auto;
+}
+
+.ml-button:hover {
+    background-color: transparent;
+    color: #dc1919;
+}
+
+.ml-project video {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .ml-content {
+        grid-template-columns: 1fr;
+    }
+}
