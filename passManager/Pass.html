@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>Password Manager</title>
+    <link rel="stylesheet" href="styles2.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Password Manager</h1>
+        <nav>
+          <a href="Pass.html" class="tab-button active">Add Password</a>
+          <a href="view.html" class="tab-button">View Passwords</a>
+        </nav>
+      </header>
+
+      <div class="tab-content active">
+        <div class="message success" id="success-message" style="display: none">
+          Password saved successfully!
+        </div>
+        <form id="password-form">
+          <div class="form-group">
+            <label for="service">Service Name</label>
+            <input type="text" id="service" required placeholder="e.g., Gmail, Facebook">
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" required placeholder="Enter your username">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="password-input">
+              <input type="password" id="password" required placeholder="Enter your password">
+              <button type="button" class="toggle-password">Show</button>
+            </div>
+          </div>
+          <button type="submit" class="btn-primary">Save Password</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

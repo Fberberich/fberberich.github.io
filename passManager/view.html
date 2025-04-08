@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'"
+    />
+    <title>View Passwords - Password Manager</title>
+    <link rel="stylesheet" href="styles2.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Password Manager</h1>
+        <nav>
+          <a href="Pass.html" class="tab-button">Add Password</a>
+          <a href="view.html" class="tab-button active">View Passwords</a>
+        </nav>
+      </header>
+
+      <div class="tab-content active">
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search passwords...">
+        </div>
+
+        <div class="password-list" id="password-list">
+          <!-- Password items will be dynamically added here -->
+        </div>
+
+        <div id="empty-state" class="message info" style="display: none;">
+          <h3>No passwords saved yet</h3>
+          <p>Start securing your accounts by adding your first password.</p>
+          <a href="Pass.html" class="btn-primary">Add Password</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="view.js"></script>
+  </body>
+</html> 

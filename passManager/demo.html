@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Manager Demo</title>
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        .container {
+            margin-top: 40px;
+        }
+
+        .tab-button {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .password-input {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+        }
+
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Password Manager Demo</h1>
+            <nav>
+                <a href="#" class="tab-button active" onclick="showTab('add'); return false;">Add Password</a>
+                <a href="#" class="tab-button" onclick="showTab('view'); return false;">View Passwords</a>
+            </nav>
+        </header>
+
+        <div class="tab-content active" id="add-content">
+            <div class="message success" id="success-message" style="display: none">
+                Password saved successfully!
+            </div>
+            <form id="password-form">
+                <div class="form-group">
+                    <label for="service">Service Name</label>
+                    <input type="text" id="service" required placeholder="e.g., Gmail, Facebook">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" required placeholder="Enter your password">
+                        <button type="button" class="toggle-password" onclick="togglePassword()">Show</button>
+                    </div>
+                </div>
+                <button type="button" class="btn-primary" onclick="savePassword()">Save Password</button>
+            </form>
+        </div>
+
+        <div class="tab-content" id="view-content">
+            <div class="password-list">
+                <div class="password-item">
+                    <div class="password-info">
+                        <h3>Gmail</h3>
+                        <p>user@example.com</p>
+                    </div>
+                    <div class="password-actions">
+                        <button class="btn-copy">Copy</button>
+                        <button class="btn-delete">Delete</button>
+                    </div>
+                </div>
+                <div class="password-item">
+                    <div class="password-info">
+                        <h3>Facebook</h3>
+                        <p>facebook.user</p>
+                    </div>
+                    <div class="password-actions">
+                        <button class="btn-copy">Copy</button>
+                        <button class="btn-delete">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="PasswordManager.html" class="back-link">Back to Project</a>
+    </div>
+
+    <script>
+        function showTab(tab) {
+            const addContent = document.getElementById('add-content');
+            const viewContent = document.getElementById('view-content');
+            const tabs = document.querySelectorAll('.tab-button');
+
+            if (tab === 'add') {
+                addContent.className = 'tab-content active';
+                viewContent.className = 'tab-content';
+                tabs[0].className = 'tab-button active';
+                tabs[1].className = 'tab-button';
+            } else {
+                addContent.className = 'tab-content';
+                viewContent.className = 'tab-content active';
+                tabs[0].className = 'tab-button';
+                tabs[1].className = 'tab-button active';
+            }
+        }
+
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleButton = document.querySelector('.toggle-password');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleButton.textContent = 'Hide';
+            } else {
+                passwordInput.type = 'password';
+                toggleButton.textContent = 'Show';
+            }
+        }
+
+        function savePassword() {
+            const successMessage = document.getElementById('success-message');
+            successMessage.style.display = 'block';
+            document.getElementById('password-form').reset();
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html> 
