@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Publications</h1>
+        <p>Academic and Research Publications</p>
+    </header>
+
+    <!-- Navigation -->
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="ProjectPage.html">Projects</a>
+        <a href="ContactPage.html">Contact Me</a>
+        <a href="Resume.html">Resume</a>
+        <a href="Publicationspage.html" class="active">Publications</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <div class="ml-container">
+        <div class="ml-content">
+            <div class="ml-project">
+                <div class="ml-project-content">
+                    <h2>Detecting Mac Malware by Implementing Machine Learning Model</h2>
+                </div>
+                <div class="ml-project-content">
+                    <img src="Images/Publications/ReseachPaperPreview.png" alt="Research Paper Preview">
+                    <br>
+                    <p>My research paper is focused on how we created a machine learned model that is able to detect trojan viruses on macOS computers.</p>
+                    <a href="Detecting Mac Malware by Implementing Machine Learning Model.docx" class="ml-button" download>Download Paper</a>
+                </div>
+            </div>
+
+            <div class="ml-project">
+                <div class="ml-project-content">
+                    <h2>Acceptance Letter</h2>
+                </div>
+                <div class="ml-project-content">
+                    <img src="Images/Publications/AlbanyAcceptence.png" alt="Research Paper Preview">
+                    <>
+                    <p>Official acceptance letter from NYS Cybersecurity conference for the research paper on Mac Malware Detection using Machine Learning.</p>
+                    <a href="14 Acceptance Letter (2).pdf" class="ml-button" download>View Letter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Fred Berberich. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>

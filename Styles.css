@@ -646,8 +646,8 @@ kalivideo {
 }
 
 .ml-project {
-    margin-bottom: 40px;
-    padding: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -655,6 +655,9 @@ kalivideo {
     display: flex;
     flex-direction: column;
     height: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .ml-project:hover {
@@ -664,7 +667,7 @@ kalivideo {
 
 .ml-project-image {
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     text-align: center;
     flex-grow: 1;
 }
@@ -672,10 +675,11 @@ kalivideo {
 .ml-project img {
     max-width: 100%;
     width: 100%;
-    height: auto;
+    height: 300px;
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    object-fit: cover;
+    object-fit: contain;
+    margin: 0 auto;
 }
 
 .ml-project-content {
