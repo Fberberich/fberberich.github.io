@@ -3,62 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <title>Fred Berberich | Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Your place to learn more about me and my work</p>
+<div class="site-shell">
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html">Fred Berberich</a>
+            <button class="menu-toggle" type="button" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="ProjectPage.html">Projects</a></li>
+                    <li><a href="Resume.html">Resume</a></li>
+                    <li><a href="Publicationspage.html">Publications</a></li>
+                    <li><a href="ContactPage.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <section class="hero">
+            <div class="container hero-grid">
+                <div>
+                    <p class="section-kicker">Cybersecurity | Research | Development</p>
+                    <h1>Building practical security projects with modern web and network tooling.</h1>
+                    <p>
+                        I am a cybersecurity professional focused on secure engineering, malware research,
+                        and real-world infrastructure labs.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="ProjectPage.html">Explore Projects</a>
+                        <a class="btn btn-outline" href="ContactPage.html">Start a Conversation</a>
+                    </div>
+                </div>
+                <div class="avatar-card">
+                    <img src="Images/HomePage/Headshot.jpg" alt="Fred Berberich portrait">
+                </div>
+            </div>
+        </section>
     </header>
-    <div class="topnav" id="myTopnav">
-        <a href="index.html" class="active">Home</a>
-        <a href="About.html">About</a>
-        <a href="ProjectPage.html">Projects</a>
-        <a href="ContactPage.html">Contact Me</a>
-        <a href="Resume.html">Resume</a>
-        <a href="Publicationspage.html">Publications</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    <!-- Main Content -->
-    <div class="main-container">
-        <div class="profile-image">
-            <img src="Images/HomePage/Headshot.jpg" alt="Headshot">
+
+    <main>
+        <div class="container">
+            <section>
+                <p class="section-kicker">Core Focus Areas</p>
+                <h2 class="section-title">Feature highlights in a modern card grid</h2>
+                <ul class="feature-list">
+                    <li class="feature-item"><span class="marker">✓</span><div><strong>Security Research</strong><br>Machine-learning approaches for malware detection and analysis.</div></li>
+                    <li class="feature-item"><span class="marker">⚙</span><div><strong>Infrastructure Labs</strong><br>Hands-on AD, BGP, and penetration testing environments.</div></li>
+                    <li class="feature-item"><span class="marker">⌁</span><div><strong>Automation</strong><br>Data extraction and analysis through custom web-scraping workflows.</div></li>
+                    <li class="feature-item"><span class="marker">↗</span><div><strong>Public Communication</strong><br>Conference posters, academic writing, and technical demos.</div></li>
+                </ul>
+            </section>
         </div>
-        <div class="profile-content">
-            <h2>Hi, I'm Fred Berberich</h2>
-            <p>
-                I am a Cybersecurity major with a passion for coding and building projects. 
-                This portfolio showcases my work, skills, and personal journey in the world of technology.
-            </p>
-            <p>
-                Take a look around, and feel free to reach out to connect!
-            </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Connect: <a href="mailto:Frederick.Berberich1@marist.edu">Frederick.Berberich1@marist.edu</a> | <a href="https://github.com/Fberberich" target="_blank" rel="noopener noreferrer">GitHub</a> | <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+            <span>&copy; 2026 Fred Berberich</span>
         </div>
-    </div>
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>Connect with me: 
-            <a href="mailto:Frederick.Berberich1@marist.edu">Email</a> 
-            <a href="https://github.com/Fberberich" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        </p>
-        <p>&copy; 2024 Fred Berberich | Personal Portfolio</p>
     </footer>
+</div>
+<script src="assets/js/site.js"></script>
 </body>
-<script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-</script>
 </html>

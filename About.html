@@ -3,73 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <title>About | Fred Berberich</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>About Me</h1>
+<div class="site-shell">
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html">Fred Berberich</a>
+            <button class="menu-toggle" type="button" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html" aria-current="page">About</a></li>
+                    <li><a href="ProjectPage.html">Projects</a></li>
+                    <li><a href="Resume.html">Resume</a></li>
+                    <li><a href="Publicationspage.html">Publications</a></li>
+                    <li><a href="ContactPage.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <div class="topnav" id="myTopnav">
-        <a href="index.html" class="active">Home</a>
-        <a href="About.html">About</a>
-        <a href="ProjectPage.html">Projects</a>
-        <a href="ContactPage.html">Contact Me</a>
-        <a href="Resume.html">Resume</a>
-        <a href="Publicationspage.html">Publications</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    <!-- Main Content -->
-    <div class="main-container">
-        <div class="aboutprofile-image">
-            <img src="Images/HomePage/Headshot.jpg" alt="Headshot">
+
+    <main>
+        <div class="container">
+            <section class="split">
+                <img src="Images/HomePage/Headshot.jpg" alt="Fred Berberich">
+                <div>
+                    <p class="section-kicker">About Me</p>
+                    <h1 class="section-title">Cybersecurity-minded builder with research and leadership experience.</h1>
+                    <p>I enjoy working where technical depth meets practical outcomes: research, networking, security operations, and project delivery.</p>
+                </div>
+            </section>
+
+            <section style="margin-top:1.2rem;">
+                <h2 class="section-title">Personal and technical summary</h2>
+                <ul class="feature-list">
+                    <li class="feature-item"><span class="marker">🏀</span><div>I stay active through basketball, golf, and competitive gaming with friends, which sharpens teamwork and decision-making.</div></li>
+                    <li class="feature-item"><span class="marker">👥</span><div>As Vice President of my university Cybersecurity Club, I help lead events, meetings, and industry connections for members.</div></li>
+                    <li class="feature-item"><span class="marker">🔬</span><div>I have conducted BLE security research and now focus on Mac malware detection using machine-learning workflows.</div></li>
+                    <li class="feature-item"><span class="marker">🖥</span><div>I have experience with Ubuntu and Nginx hosting, and I am building VMware lab environments for deeper monitoring and analysis.</div></li>
+                </ul>
+            </section>
         </div>
-        <div class="aboutprofile-content">
-            <h2>Hello There!</h2>
-            <p style="text-indent:30px;">
-                In my free time, I love staying active and spending time with friends, whether it's playing basketball, golfing, or competing in video games. I enjoy the strategy and teamwork involved in sports, as well as the fast-paced excitement of gaming. One of my current favorite games is Marvel Rivals, where I'm constantly playing ranked matches with friends and enjoying the fresh content that the game is currently providing.
-                <br>
-                <br>
-            </p>
-            <p style="text-indent:30px;">
-                On the technical side, I have experience in cybersecurity, web hosting, and networking. As the Vice President of my university's Cybersecurity Club, I've helped organize events, connect members with industry professionals, and run meetings. I've also researched Low-Energy Bluetooth technology through my University's research grants and currently, I am researching Apple Mac malware. My work involves developing machine learning models to detect specific types of malware, which allows me to combine my interests in cybersecurity, data science, and automation. Additionally, I have experience hosting websites using Ubuntu and Nginx, and I'm working on setting up a virtual network in VMware to monitor system activity with Splunk.
-            </p>
-                <br>
-                <br>
-            <p style="text-indent:30px;">
-                Technology has always fascinated me, and I'm excited to see where my passion takes me. Whether it's cybersecurity, networking, or another area, I enjoy the challenge of solving problems and learning new things. The tech world is constantly evolving, and I look forward to growing alongside it and discovering new opportunities along the way.   
-                <br>
-                <br>
-                Take a look around, and feel free to reach out to connect!
-                <br>
-                <br>            
-                - Fred Berberich
-            </p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <span>Connect: <a href="mailto:Frederick.Berberich1@marist.edu">Frederick.Berberich1@marist.edu</a> | <a href="https://github.com/Fberberich" target="_blank" rel="noopener noreferrer">GitHub</a> | <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+            <span>&copy; 2026 Fred Berberich</span>
         </div>
-    </div>
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>Connect with me: 
-            <a href="mailto:Frederick.Berberich1@marist.edu">Email</a> |
-            <a href="https://github.com/Fberberich" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        </p>
-        <p>&copy; 2024 Fred Berberich | Personal Portfolio</p>
     </footer>
+</div>
+<script src="assets/js/site.js"></script>
 </body>
-<script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-</script>
 </html>

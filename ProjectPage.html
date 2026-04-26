@@ -3,105 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <title>Projects | Fred Berberich</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Fred Berberich Projects</h1>
-        <p>Your place to learn more about me and my work</p>
+<div class="site-shell">
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html">Fred Berberich</a>
+            <button class="menu-toggle" type="button" onclick="toggleMenu()">☰</button>
+            <nav><ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="ProjectPage.html" aria-current="page">Projects</a></li>
+                <li><a href="Resume.html">Resume</a></li>
+                <li><a href="Publicationspage.html">Publications</a></li>
+                <li><a href="ContactPage.html">Contact</a></li>
+            </ul></nav>
+        </div>
     </header>
-    <div class="topnav" id="myTopnav">
-        <a href="index.html" class="active">Home</a>
-        <a href="About.html">About</a>
-        <a href="ProjectPage.html">Projects</a>
-        <a href="ContactPage.html">Contact Me</a>
-        <a href="Resume.html">Resume</a>
-        <a href="Publicationspage.html">Publications</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-      <main>
-        <br>
-        <div class="content">
-            <div class="project">
-                <h2>Machine Learning Research</h2>
-                <img src="Images/ProjectPage/NewerModel.png" alt="Machine Learning Model" style="max-width: 400px; width: 100%; height: auto;">
-                <p>Explore my machine learning research projects, including model improvements and malware analysis.</p>
-                <a href="MachineLearning.html" class="button">Click Me</a>
-            </div>
-            <div class="project">
-                <h2>Web Scraper Project</h2>
-                <img src="Images/ProjectPage/Webscraper_home.png" alt="Web Scraper Project">
-                <p>A powerful web scraping application with an intuitive interface for extracting and analyzing data from websites.</p>
-                <a href="WebscraperPage.html" class="button">Click Me</a>
-            </div>
-            <div class="project">
-                <h2>Password Manager</h2>
-                <img src="passManager/PasswordManagerMainScreen.png" alt="Password Manager Project">
-                <p>A secure and user-friendly password management application.</p>
-                <a href="passManager/PasswordManager.html" class="button">Click Me</a>
-            </div>
-            <div class="project">
-                <h2>Low Energy Bluetooth (BLE) </h2>
-                <img src="Images/ProjectPage/BLElogo.png" style="max-width: 400px; width: 100%; height: auto;">
-                <p>Research done on Low Energy Bluetooth that focuses on the security protols such as Mac Randomization</p>               
-                <a href="BLEPage.html" class="button">Click me</a>
-            </div>
-            <div class="project">
-                <h2>Cisco Packet Tracer Labs</h2>
-                <img src="data:image/png;base64,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"width="100" height="100">
-                <p>Lab files that demonstrates my skills in basic network troubleshooting, hardware configuring, and overall knowledge of networks</p>
-                <a href="https://github.com/Fberberich/Projects/tree/main/Networks" class="button">Click me</a>
-            </div>
-            <div class="project">
-                <h2>Web Development with HTML, CSS, & JavaScript</h2>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB0zeud2iStWcLNYy0L7bd_nxkXOGIW2UVSQ&usqp=CAU" alt="Web Development with JavaScript">
-                <p>This project involves building dynamic and interactive web applications using JavaScript, HTML, & CSS</p>
-                <a href="https://github.com/Fberberich/fberberich.github.io" class="button">Click me</a>
-            </div>
-            <div class="project">
-                <h2>Creating an Windows Active Directory</h2>
-                <img src="data:image/png;base64,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" alt="Windows Server Project">
-                <p>Project that demonstrates skills in setting up an active directory and connecting PCs with Windows and Linux OS' to it</p>
-                <a href="ActiveDirectory.html" class="button">Click Me</a>
-            </div>
-            <div class="project">
-                <h2>BGP Network Project</h2>
-                <img src="data:image/png;base64,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" alt="BGP Project">
-                <p>This project uses VMware to run 5 virtual machines to make up an "inner" and "outer" network and simulates a the configuration of BGP</p>
-                <a href="BGPPage.html" class="button">Click Me</a>
-            </div>
-            <div class="project">
-                <h2>Pen Testing Project</h2>
-                <img src="Images/ProjectPage/KaliLinuxImage.jpg" alt="Windows Server Project">
-                <p>This project makes use of Kali Linux's pre-installed pen testing tools such as "Nmap" and "Metasploit"</p>
-                <a href="kali.html" class="button">Click Me</a>
-            </div>
-            </div> 
-        </main>
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>Connect with me: 
-            <a href="mailto:Frederick.Berberich1@marist.edu">Email</a> |
-            <a href="https://github.com/Fberberich" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        </p>
-        <p>&copy; 2024 Fred Berberich | Personal Portfolio</p>
+    <main>
+        <div class="container">
+            <p class="section-kicker">Project Portfolio</p>
+            <h1 class="section-title">Professional, card-based project navigation</h1>
+            <section class="cards-grid">
+                <article class="card"><img src="Images/ProjectPage/NewerModel.png" alt="Machine Learning"><h3>Machine Learning Research</h3><p>Mac malware detection and model refinement work.</p><p style="margin-top:.75rem;"><a class="btn btn-primary" href="MachineLearning.html">View Project</a></p></article>
+                <article class="card"><img src="Images/ProjectPage/Webscraper_home.png" alt="Web Scraper"><h3>Web Scraper Project</h3><p>Automated data collection and analysis workflows.</p><p style="margin-top:.75rem;"><a class="btn btn-primary" href="WebscraperPage.html">View Project</a></p></article>
+                <article class="card"><img src="passManager/PasswordManagerMainScreen.png" alt="Password Manager"><h3>Password Manager</h3><p>Secure credential management with an easy interface.</p><p style="margin-top:.75rem;"><a class="btn btn-primary" href="passManager/PasswordManager.html">View Project</a></p></article>
+                <article class="card"><img src="Images/ProjectPage/BLElogo.png" alt="BLE"><h3>BLE Research</h3><p>Security-focused BLE research and documentation.</p><p style="margin-top:.75rem;"><a class="btn btn-primary" href="BLEPage.html">View Project</a></p></article>
+                <article class="card"><img src="Images/ProjectPage/ActiveDirectoryTop.png" alt="Active Directory"><h3>Active Directory Lab</h3><p>Domain and endpoint configuration in a virtual lab.</p><p style="margin-top:.75rem;"><a class="btn btn-primary" href="ActiveDirectory.html">View Project</a></p></article>
+                <article class="card"><img src="Images/ProjectPage/BGPTopology.png" alt="BGP"><h3>BGP Virtual Network</h3><p>BGP implementation across VMware network segments.</p><p style="margin-top:.75rem;"><a class="btn btn-primary" href="BGPPage.html">View Project</a></p></article>
+                <article class="card"><img src="Images/ProjectPage/KaliLinuxImage.jpg" alt="Pen Testing"><h3>Pen Testing Lab</h3><p>Nmap and Metasploit work in a controlled lab setup.</p><p style="margin-top:.75rem;"><a class="btn btn-primary" href="kali.html">View Project</a></p></article>
+                <article class="card"><img src="Images/ProjectPage/BLEBoard.png" alt="Cisco Labs"><h3>Network Labs</h3><p>Routing and troubleshooting labs published in GitHub.</p><p style="margin-top:.75rem;"><a class="btn btn-primary" href="https://github.com/Fberberich/Projects/tree/main/Networks">View Labs</a></p></article>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <span>Connect: <a href="mailto:Frederick.Berberich1@marist.edu">Frederick.Berberich1@marist.edu</a> | <a href="https://github.com/Fberberich" target="_blank" rel="noopener noreferrer">GitHub</a> | <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+            <span>&copy; 2026 Fred Berberich</span>
+        </div>
     </footer>
+</div>
+<script src="assets/js/site.js"></script>
 </body>
-<script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-</script>
 </html>

@@ -3,67 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windows Active Directory & Domain</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <title>Active Directory Lab | Fred Berberich</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Windows Active Directory (AD) & Domain</h1>
-    </header>
-    <div class="topnav" id="myTopnav">
-        <a href="index.html" class="active">Home</a>
-        <a href="AboutPage.html">About</a>
-        <a href="ProjectPage.html">Projects</a>
-        <a href="ContactPage.html">Contact Me</a>
-        <a href="Resume.html">Resume</a>
-        <a href="Publicationspage.html">Publications</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    <!-- Main Content -->
-    <div class="main-container">
-        <div class="resumeimagebackground">
-        <class container="WAD">
-            <h2>Overview</h2>
-            <p>This page showcases screenshots demonstrating a virtual Windows directory and domain environment created for learning purposes.</p>
-            <div class="screenshot">
-                <h3>Active Directory Topology</h3>
-                <img src="Images/ProjectPage/ActiveDirectoryTop.png" alt="Active Directory Topology">
-            </div>
-    
-            <div class="screenshot">
-                <h3>Windows Server Domain Settings</h3>
-                <img src="Images/ProjectPage/WindowServerDomainSC.png" alt="Windows Server Domain Settings">
-            </div>
-    
-            <div class="screenshot">
-                <h3>Windows Client Domain Configuration</h3>
-                <img src="Images/ProjectPage/WindowPCDomain.png" alt="Windows Client Domain Configuration">
-            </div>
-            </div>
-        </div>
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>Connect with me: 
-            <a href="mailto:Frederick.Berberich1@marist.edu">Email</a> |
-            <a href="https://github.com/Fberberich" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        </p>
-        <p>&copy; 2024 Fred Berberich | Personal Portfolio</p>
-    </footer>
-</body>
-<script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-</script>
-</html>
+<div class="site-shell">
+    <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html">Fred Berberich</a><button class="menu-toggle" type="button" onclick="toggleMenu()">☰</button><nav><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="ProjectPage.html">Projects</a></li></ul></nav></div></header>
+    <main><div class="container">
+        <p class="section-kicker">Project Detail</p><h1 class="section-title">Windows Active Directory and Domain Lab</h1>
+        <section class="cards-grid">
+            <article class="card"><img src="Images/ProjectPage/ActiveDirectoryTop.png" alt="AD topology"><h3>Active Directory Topology</h3></article>
+            <article class="card"><img src="Images/ProjectPage/WindowServerDomainSC.png" alt="Server domain settings"><h3>Server Domain Settings</h3></article>
+            <article class="card"><img src="Images/ProjectPage/WindowPCDomain.png" alt="Client domain configuration"><h3>Client Domain Join</h3></article>
+        </section>
+    </div></main>
+    <footer class="site-footer"><div class="container"><span>&copy; 2026 Fred Berberich</span></div></footer>
+</div><script src="assets/js/site.js"></script>
+</body></html>

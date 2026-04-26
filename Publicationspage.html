@@ -3,72 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <title>Publications | Fred Berberich</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Publications</h1>
-        <p>Academic and Research Publications</p>
-    </header>
-
-    <!-- Navigation -->
-    <div class="topnav" id="myTopnav">
-        <a href="index.html">Home</a>
-        <a href="About.html">About</a>
-        <a href="ProjectPage.html">Projects</a>
-        <a href="ContactPage.html">Contact Me</a>
-        <a href="Resume.html">Resume</a>
-        <a href="Publicationspage.html" class="active">Publications</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-
-    <div class="ml-container">
-        <div class="ml-content">
-            <div class="ml-project">
-                <div class="ml-project-content">
-                    <h2>Detecting Mac Malware by Implementing Machine Learning Model</h2>
-                </div>
-                <div class="ml-project-content">
-                    <img src="Images/Publications/ReseachPaperPreview.png" alt="Research Paper Preview">
-                    <br>
-                    <p>My research paper is focused on how we created a machine learned model that is able to detect trojan viruses on macOS computers.</p>
-                    <a href="Detecting Mac Malware by Implementing Machine Learning Model.docx" class="ml-button" download>Download Paper</a>
-                </div>
-            </div>
-
-            <div class="ml-project">
-                <div class="ml-project-content">
-                    <h2>Acceptance Letter</h2>
-                </div>
-                <div class="ml-project-content">
-                    <img src="Images/Publications/AlbanyAcceptence.png" alt="Research Paper Preview">
-                    <br>
-                    <p>Official acceptance letter from NYS Cybersecurity conference for the research paper on Mac Malware Detection using Machine Learning.</p>
-                    <a href="14 Acceptance Letter (2).pdf" class="ml-button" download>View Letter</a>
-                </div>
-            </div>
+<div class="site-shell">
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html">Fred Berberich</a>
+            <button class="menu-toggle" type="button" onclick="toggleMenu()">☰</button>
+            <nav><ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="ProjectPage.html">Projects</a></li>
+                <li><a href="Resume.html">Resume</a></li>
+                <li><a href="Publicationspage.html" aria-current="page">Publications</a></li>
+                <li><a href="ContactPage.html">Contact</a></li>
+            </ul></nav>
         </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Fred Berberich. All rights reserved.</p>
+    </header>
+    <main>
+        <div class="container">
+            <p class="section-kicker">Research</p>
+            <h1 class="section-title">Publications and acceptance artifacts</h1>
+            <section class="cards-grid">
+                <article class="card">
+                    <img src="Images/Publications/ReseachPaperPreview.png" alt="Research paper preview">
+                    <h3>Detecting Mac Malware by Implementing Machine Learning Model</h3>
+                    <p>Research focused on ML-based trojan detection for macOS.</p>
+                    <p style="margin-top:.75rem;"><a class="btn btn-primary" href="Detecting Mac Malware by Implementing Machine Learning Model.docx" download>Download Paper</a></p>
+                </article>
+                <article class="card">
+                    <img src="Images/Publications/AlbanyAcceptence.png" alt="Acceptance letter preview">
+                    <h3>Acceptance Letter</h3>
+                    <p>Official conference acceptance for the malware detection paper.</p>
+                    <p style="margin-top:.75rem;"><a class="btn btn-primary" href="14 Acceptance Letter (2).pdf" download>View Letter</a></p>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <span>Connect: <a href="mailto:Frederick.Berberich1@marist.edu">Frederick.Berberich1@marist.edu</a> | <a href="https://github.com/Fberberich" target="_blank" rel="noopener noreferrer">GitHub</a> | <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+            <span>&copy; 2026 Fred Berberich</span>
+        </div>
     </footer>
-
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-    </script>
+</div>
+<script src="assets/js/site.js"></script>
 </body>
 </html>

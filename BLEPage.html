@@ -3,73 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <title>BLE Research | Fred Berberich</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Research on Low Energy Bluetooth (BLE)</h1>
-        <p>Conducted during the summer of 2023</p>
-    </header>
-    <div class="topnav" id="myTopnav">
-        <a href="index.html" class="active">Home</a>
-        <a href="AboutPage.html">About</a>
-        <a href="ProjectPage.html">Projects</a>
-        <a href="ContactPage.html">Contact Me</a>
-        <a href="Resume.html">Resume</a>
-        <a href="Publicationspage.html">Publications</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    <!-- Main Content -->
-    <main>
-        <div class="box"style="text-align: center;">
-        <section>
-            <h2 style="text-align: center;">Research Presentation Board </h2>
-            <p style="text-align: center;">BLE poster board presented at several conferences</p>
-            <img class="embedded-content" src="Images/ProjectPage/BLEBoard.png" alt="Certificate of Approval">
-            <p><br><p>
-                <b style="text-align: center;"><a class="nice-link" href="Images/ProjectPage/BLE Cursca Board.pptx" target="_blank" >View BLE presentation PDF</a>
-                </b>
-            <p><br><p>
+<div class="site-shell">
+    <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html">Fred Berberich</a><button class="menu-toggle" type="button" onclick="toggleMenu()">☰</button><nav><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="ProjectPage.html">Projects</a></li></ul></nav></div></header>
+    <main><div class="container">
+        <p class="section-kicker">Project Detail</p><h1 class="section-title">Low Energy Bluetooth Security Research</h1>
+        <section class="cards-grid">
+            <article class="card"><img src="Images/ProjectPage/BLEBoard.png" alt="Presentation board"><h3>Research Presentation Board</h3><p>Conference presentation artifact.</p><p style="margin-top:.75rem;"><a class="btn btn-primary" href="Images/ProjectPage/BLE Cursca Board.pptx">Open File</a></p></article>
+            <article class="card"><img src="Images/ProjectPage/ResearchProposal.png" alt="Research proposal"><h3>Research Proposal</h3><p>Approved plan documenting study scope.</p><p style="margin-top:.75rem;"><a class="btn btn-primary" href="Images/ProjectPage/Research Proposal.pdf">View PDF</a></p></article>
+            <article class="card"><img src="Images/ProjectPage/Award.jpg" alt="Approval certificate"><h3>Certificate of Approval</h3><p>Selected undergraduate participant in 2023.</p></article>
         </section>
-        <section>
-            <h2 style="text-align: center;">Research Proposal</h2>
-            <p style="text-align: center;">Copy of approved research proposal</p>
-            <img class="embedded-content" src="Images/ProjectPage/ResearchProposal.png" alt="Certificate of Approval">
-            <p><br><p></p>
-            <a class="nice-link" href="Images/ProjectPage/Research Proposal.pdf" target="_blank">View Proposal PDF</a>
-            <p><br></p>
-            </section>
-            <section>
-                <h2 style="text-align: center;">Certificate of Approval</h2>
-                <p style="text-align: center;">Only undergraduate in the fellowship selected in 2023</p>
-                <img class="embedded-content" src="Images/ProjectPage/Award.jpg" alt="Certificate of Approval">
-            </section>
-        </div>
-        </main>
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>Connect with me: 
-            <a href="mailto:Frederick.Berberich1@marist.edu">Email</a> |
-            <a href="https://github.com/Fberberich" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        </p>
-        <p>&copy; 2024 Fred Berberich | Personal Portfolio</p>
-    </footer>
-</body>
-<script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-</script>
-</html>
+    </div></main>
+    <footer class="site-footer"><div class="container"><span>&copy; 2026 Fred Berberich</span></div></footer>
+</div><script src="assets/js/site.js"></script>
+</body></html>

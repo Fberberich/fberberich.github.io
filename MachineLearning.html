@@ -3,118 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Machine Learning Projects</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <title>Machine Learning Research | Fred Berberich</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Machine Learning Research</h1>
-        <p>Exploring AI and Machine Learning Applications</p>
-    </header>
-    <div class="topnav" id="myTopnav">
-        <a href="index.html">Home</a>
-        <a href="About.html">About</a>
-        <a href="ProjectPage.html">Projects</a>
-        <a href="ContactPage.html">Contact Me</a>
-        <a href="Resume.html">Resume</a>
-        <a href="Publicationspage.html">Publications</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>
-    <div class="ml-container">
-        <div class="ml-content">
-            <div class="ml-project">
-                <div class="ml-project-content">
-                    <h2>Enhanced Machine Learning Model</h2>
-                </div>
-                <div class="ml-project-image">
-                    <img src="Images/ProjectPage/NewerModel.png" alt="Newer ML Model">
-                </div>
-                <div class="ml-project-content">
-                    <p>Since we at the time didn't have more malware logs, we decided to remove non-malware logs. This shows that if we recieve more trojan malware logs, we would be able to make our model more accurate and that our project overall has room to grow.</p>
-                </div>
-            </div>
-            <div class="ml-project">
-                <div class="ml-project-content">
-                    <h2>Original Machine Learning Implementation</h2>
-                </div>
-                <div class="ml-project-image">
-                    <img src="Images/ProjectPage/OlderModel.png" alt="Original ML Model">
-                </div>
-                <div class="ml-project-content">
-                    <p>The initial implementation of our machine learning model, establishing the foundation for our research. This version helped us identify areas of improvements such as finding ways to work around found issues such as data bias towards non-malware data.</p>
-                </div>
-            </div>
-            <div class="ml-project">
-                <div class="ml-project-content">
-                    <h2>Mac Malware Analysis Research</h2>
-                </div>
-                <div class="ml-project-image">
-                    <img src="Images/ProjectPage/Mac Malware Poster.png" alt="Mac Malware Research Poster">
-                </div>
-                <div class="ml-project-content">
-                    <p>Research poster presenting findings on Mac malware detection and analysis techniques. This study explores innovative approaches to identifying and mitigating security threats.</p>
-                    <a href="Images/ProjectPage/Tech Meets.pdf" class="ml-button">View Full Poster</a>
-                </div>
-            </div>
-            <div class="ml-project">
-                <div class="ml-project-content">
-                    <h2>Presentation submitted for IEEE Best Mid Hudson Valley Capstone Project Award</h2>
-                </div>
-                <video controls>
-                    <source src="Images/ProjectPage/IEEECappingPresentationvideo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="ml-project">
-                <div class="ml-project-content">
-                    <h2>Updated Research Poster; Presented at NYCWIC (2025) & CURSCA (2025)</h2>
-                </div>
-                <div class="ml-project-image">
-                    <img src="Images/ProjectPage/Mac Malware Poster for NYCWIC & Cursca 2025.png" alt="Mac Malware Research Poster">
-                </div>
-                <div class="ml-project-content">
-                    <p>Research poster presenting findings on Mac malware detection and analysis techniques. This study explores innovative approaches to identifying and mitigating security threats.</p>
-                    <a href="Images/ProjectPage/Mac Malware Poster for NYCWIC & Cursca 2025.pdf" class="ml-button">View Full Poster</a>
-                </div>
-            </div>
-            <div class="ml-project">
-                <div class="ml-project-content">
-                    <h2>Overall Goals for the Malware ML project</h2>
-                </div>
-                <div class="ml-project-image">
-                    <img src="https://via.placeholder.com/800x400?text=AI+Security" alt="AI Security Research">
-                </div>
-                <div class="ml-project-content">
-                    <p>Overall, the project would lead to the creation of a malware detection system for Apple Macbook viruses. The idea currently is to achieve this by using Mult-level Classification.</p>
-                    <a href="#" class="ml-button">Coming Soon</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>Connect with me: 
-            <a href="mailto:Frederick.Berberich1@marist.edu">Email</a> 
-            <a href="https://github.com/Fberberich" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        </p>
-        <p>&copy; 2024 Fred Berberich | Machine Learning Portfolio</p>
-    </footer>
-
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
-        }
-    </script>
-</body>
-</html>
+<div class="site-shell">
+    <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html">Fred Berberich</a><button class="menu-toggle" type="button" onclick="toggleMenu()">☰</button><nav><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="About.html">About</a></li><li><a href="ProjectPage.html">Projects</a></li><li><a href="Resume.html">Resume</a></li><li><a href="Publicationspage.html">Publications</a></li><li><a href="ContactPage.html">Contact</a></li></ul></nav></div></header>
+    <main><div class="container">
+        <p class="section-kicker">Project Detail</p><h1 class="section-title">Machine Learning Malware Detection Research</h1>
+        <section class="card" style="margin-bottom:1rem;">
+            <h3>Summary</h3>
+            <p>This research compares baseline and improved malware-detection models, documents lessons around dataset quality, and presents results through posters and technical presentations.</p>
+        </section>
+        <section class="cards-grid">
+            <article class="card"><img src="Images/ProjectPage/NewerModel.png" alt="Enhanced model"><h3>Enhanced Machine Learning Model</h3><p>Latest model focused on stronger malware detection behavior.</p></article>
+            <article class="card"><img src="Images/ProjectPage/OlderModel.png" alt="Original model"><h3>Original Implementation</h3><p>Initial version that established the project baseline.</p></article>
+            <article class="card"><img src="Images/ProjectPage/Mac Malware Poster for NYCWIC & Cursca 2025.png" alt="Research poster"><h3>Updated Research Poster</h3><p>Presented at NYCWIC and CURSCA 2025.</p><p style="margin-top:.75rem;"><a class="btn btn-primary" href="Images/ProjectPage/Mac Malware Poster for NYCWIC & Cursca 2025.pdf">View PDF</a></p></article>
+            <article class="card"><video controls><source src="Images/ProjectPage/IEEECappingPresentationvideo.mp4" type="video/mp4"></video><h3>IEEE Presentation</h3><p>Capstone presentation showcasing goals and results.</p></article>
+        </section>
+    </div></main>
+    <footer class="site-footer"><div class="container"><span>Connect: <a href="mailto:Frederick.Berberich1@marist.edu">Frederick.Berberich1@marist.edu</a></span><span>&copy; 2026 Fred Berberich</span></div></footer>
+</div><script src="assets/js/site.js"></script>
+</body></html>

@@ -3,56 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
-    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <title>Resume | Fred Berberich</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <h1>Fred Berberich's Resume</h1>
-        <p>Copy of my resume</p>
-    </header>
-    <div class="topnav" id="myTopnav">
-        <a href="index.html" class="active">Home</a>
-        <a href="About.html">About</a>
-        <a href="ProjectPage.html">Projects</a>
-        <a href="ContactPage.html">Contact Me</a>
-        <a href="Resume.html">Resume</a>
-        <a href="Publicationspage.html">Publications</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-    <!-- Main Content -->
-    <div class="main-container">
-        <div class="resumeimagebackground">
-            <div class="resume">
-                <img src="Images/ResumePage/Resume.png" alt="Resume" class="resume">
-                <div class="download-container">
-                <a href="Images/ResumePage/Frederick_Berberich_resume.pdf" download>Download File</a>
-            </div>
+<div class="site-shell">
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html">Fred Berberich</a>
+            <button class="menu-toggle" type="button" onclick="toggleMenu()">☰</button>
+            <nav><ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="ProjectPage.html">Projects</a></li>
+                <li><a href="Resume.html" aria-current="page">Resume</a></li>
+                <li><a href="Publicationspage.html">Publications</a></li>
+                <li><a href="ContactPage.html">Contact</a></li>
+            </ul></nav>
         </div>
-    </div>
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>Connect with me: 
-            <a href="mailto:Frederick.Berberich1@marist.edu">Email</a> |
-            <a href="https://github.com/Fberberich" target="_blank"><i class="fa fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank"><i class="fa fa-linkedin"></i></a>
-        </p>
-        <p>&copy; 2024 Fred Berberich | Personal Portfolio</p>
+    </header>
+    <main>
+        <div class="container">
+            <p class="section-kicker">Resume</p>
+            <h1 class="section-title">Professional snapshot</h1>
+            <article class="card">
+                <img src="Images/ResumePage/Resume.png" alt="Resume preview">
+                <p style="margin-top:1rem;"><a class="btn btn-primary" href="Images/ResumePage/Frederick_Berberich_resume.pdf" download>Download PDF Resume</a></p>
+            </article>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <span>Connect: <a href="mailto:Frederick.Berberich1@marist.edu">Frederick.Berberich1@marist.edu</a> | <a href="https://github.com/Fberberich" target="_blank" rel="noopener noreferrer">GitHub</a> | <a href="https://www.linkedin.com/in/frederick-berberich/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+            <span>&copy; 2026 Fred Berberich</span>
+        </div>
     </footer>
+</div>
+<script src="assets/js/site.js"></script>
 </body>
-<script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
-</script>
 </html>
