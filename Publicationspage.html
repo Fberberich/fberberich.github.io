@@ -23,21 +23,40 @@
         </div>
     </header>
     <main>
-        <div class="container">
+        <div class="container publications-page">
             <p class="section-kicker">Research</p>
             <h1 class="section-title">Publications and acceptance artifacts</h1>
-            <section class="cards-grid">
-                <article class="card">
-                    <img src="Images/Publications/ReseachPaperPreview.png" alt="Research paper preview">
-                    <h3>Detecting Mac Malware by Implementing Machine Learning Model</h3>
-                    <p>Research focused on ML-based trojan detection for macOS.</p>
-                    <p style="margin-top:.75rem;"><a class="btn btn-primary" href="Detecting Mac Malware by Implementing Machine Learning Model.docx" download>Download Paper</a></p>
+
+            <section class="cards-grid publications-grid">
+                <article class="card publication-card publication-card--paper">
+                    <div class="publication-card-header">
+                        <h3>Detecting Mac Malware by Implementing Machine Learning Model</h3>
+                        <p>Research focused on ML-based trojan detection for macOS.</p>
+                        <div class="publication-actions">
+                            <button type="button" class="btn btn-primary" id="print-research-paper">Print Paper</button>
+                            <a class="btn btn-secondary" href="Images/Publications/Detecting%20Mac%20Malware%20by%20Implementing%20Machine%20Learning%20Model.pdf" download>Download PDF</a>
+                        </div>
+                    </div>
+                    <div class="pdf-preview-panel">
+                        <iframe
+                            id="research-paper-pdf"
+                            src="Images/Publications/Detecting%20Mac%20Malware%20by%20Implementing%20Machine%20Learning%20Model.pdf"
+                            title="Detecting Mac Malware by Implementing Machine Learning Model">
+                        </iframe>
+                    </div>
                 </article>
-                <article class="card">
-                    <img src="Images/Publications/AlbanyAcceptence.png" alt="Acceptance letter preview">
-                    <h3>Acceptance Letter</h3>
-                    <p>Official conference acceptance for the malware detection paper.</p>
-                    <p style="margin-top:.75rem;"><a class="btn btn-primary" href="14 Acceptance Letter (2).pdf" download>View Letter</a></p>
+
+                <article class="card publication-card publication-card--letter">
+                    <div class="publication-card-header">
+                        <h3>Acceptance Letter</h3>
+                        <p>Official conference acceptance for the malware detection paper.</p>
+                        <div class="publication-actions">
+                            <a class="btn btn-primary" href="Images/Publications/14%20Acceptance%20Letter%20(2).pdf" target="_blank" rel="noopener noreferrer">View Letter</a>
+                        </div>
+                    </div>
+                    <div class="publication-card-visual">
+                        <img src="Images/Publications/AlbanyAcceptence.png" alt="Acceptance letter preview">
+                    </div>
                 </article>
             </section>
         </div>
@@ -50,5 +69,19 @@
     </footer>
 </div>
 <script src="assets/js/site.js"></script>
+<script>
+    document.getElementById("print-research-paper")?.addEventListener("click", function () {
+        var frame = document.getElementById("research-paper-pdf");
+        if (!frame) {
+            return;
+        }
+        try {
+            frame.contentWindow.focus();
+            frame.contentWindow.print();
+        } catch (err) {
+            window.open(frame.src, "_blank", "noopener,noreferrer");
+        }
+    });
+</script>
 </body>
 </html>
