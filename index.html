@@ -20,11 +20,10 @@
                     <li><a href="ProjectPage.html">Projects</a></li>
                     <li><a href="Resume.html">Resume</a></li>
                     <li><a href="Publicationspage.html">Publications</a></li>
-                    <li><a href="ContactPage.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
-        <section class="hero">
+        <section class="hero hero--landing">
             <div class="container hero-grid">
                 <div>
                     <p class="section-kicker">Cybersecurity | Research | Development</p>
@@ -34,8 +33,9 @@
                         and real-world infrastructure labs.
                     </p>
                     <div class="hero-actions">
-                        <a class="btn btn-primary" href="ProjectPage.html">Explore Projects</a>
-                        <a class="btn btn-outline" href="ContactPage.html">Start a Conversation</a>
+                        <a class="btn btn-primary" href="ProjectPage.html">View Projects</a>
+                        <a class="btn btn-outline" href="Resume.html">Resume</a>
+                        <a class="btn btn-outline" href="ContactPage.html">Contact</a>
                     </div>
                 </div>
                 <div class="avatar-card">
@@ -46,18 +46,49 @@
     </header>
 
     <main>
-        <div class="container">
-            <section>
-                <p class="section-kicker">Core Focus Areas</p>
-                <h2 class="section-title">Feature highlights in a modern card grid</h2>
-                <ul class="feature-list">
-                    <li class="feature-item"><span class="marker">✓</span><div><strong>Security Research</strong><br>Machine-learning approaches for malware detection and analysis.</div></li>
-                    <li class="feature-item"><span class="marker">⚙</span><div><strong>Infrastructure Labs</strong><br>Hands-on AD, BGP, and penetration testing environments.</div></li>
-                    <li class="feature-item"><span class="marker">⌁</span><div><strong>Automation</strong><br>Data extraction and analysis through custom web-scraping workflows.</div></li>
-                    <li class="feature-item"><span class="marker">↗</span><div><strong>Public Communication</strong><br>Conference posters, academic writing, and technical demos.</div></li>
-                </ul>
-            </section>
-        </div>
+        <section class="featured-showcase">
+            <div class="container">
+                <div class="featured-showcase-header">
+                    <div>
+                        <p class="section-kicker">Featured Projects</p>
+                        <h2 class="section-title">Recent work</h2>
+                    </div>
+                    <a class="featured-showcase-link" href="ProjectPage.html">View all projects →</a>
+                </div>
+                <div class="featured-grid">
+                    <article class="featured-card">
+                        <a class="featured-card-media" href="MachineLearning.html">
+                            <img src="Images/ProjectPage/NewerModel.png" alt="Mac malware machine learning model visualization">
+                        </a>
+                        <div class="featured-card-body">
+                            <h3>Mac Malware Detection Research</h3>
+                            <p>Machine-learning research on Mac malware detection, model refinement, and conference presentations.</p>
+                            <a class="btn btn-primary" href="MachineLearning.html">View Project</a>
+                        </div>
+                    </article>
+                    <article class="featured-card">
+                        <a class="featured-card-media" href="BLEPage.html">
+                            <img src="Images/ProjectPage/BLElogo.png" alt="Bluetooth Low Energy research logo">
+                        </a>
+                        <div class="featured-card-body">
+                            <h3>BLE Security Research</h3>
+                            <p>Security-focused Bluetooth Low Energy research with proposal documentation and presentation materials.</p>
+                            <a class="btn btn-primary" href="BLEPage.html">View Project</a>
+                        </div>
+                    </article>
+                    <article class="featured-card">
+                        <a class="featured-card-media" href="WebscraperPage.html">
+                            <img src="Images/ProjectPage/Webscraper_home.png" alt="Web scraper application home screen">
+                        </a>
+                        <div class="featured-card-body">
+                            <h3>Web Scraper Application</h3>
+                            <p>Automated data collection and analysis through a custom scraping and review workflow.</p>
+                            <a class="btn btn-primary" href="WebscraperPage.html">View Project</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">

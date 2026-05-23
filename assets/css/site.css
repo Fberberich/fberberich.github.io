@@ -102,6 +102,15 @@ a {
     padding: 3.8rem 0 3.2rem;
 }
 
+.hero--landing {
+    padding: clamp(3.5rem, 8vw, 5.5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.hero-lead {
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
 .hero-grid {
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
@@ -169,6 +178,99 @@ a {
 
 main {
     padding: 2.6rem 0 4rem;
+}
+
+.featured-showcase {
+    padding: 0 0 1rem;
+}
+
+.featured-showcase-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.featured-showcase-header .section-title {
+    margin-bottom: 0;
+}
+
+.featured-showcase-link {
+    font-weight: 600;
+    color: var(--muted);
+    transition: color 0.2s ease;
+}
+
+.featured-showcase-link:hover {
+    color: var(--brand);
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+
+.featured-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.16);
+}
+
+.featured-card-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem;
+    background: #f3f4f6;
+    border-bottom: 1px solid var(--line);
+}
+
+.featured-card-media img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 130px;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #d8e1ee;
+}
+
+.featured-card-body {
+    padding: 1.15rem 1.2rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.featured-card-body h3 {
+    margin: 0 0 0.55rem;
+    font-size: 1.1rem;
+}
+
+.featured-card-body p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.55;
+    flex: 1;
+}
+
+.featured-card-body .btn {
+    margin-top: 1rem;
+    align-self: flex-start;
 }
 
 .section-title {
@@ -378,6 +480,10 @@ textarea {
     }
 
     .feature-list {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-grid {
         grid-template-columns: 1fr;
     }
 }
